@@ -1,2 +1,2 @@
-# SSA-CNTLR
-Solid State Amplifier Controller
+# RF-AMP-CNTLR_V1
+RF Amplifier Controller
