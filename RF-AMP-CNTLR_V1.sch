@@ -1,0 +1,2733 @@
+EESchema Schematic File Version 4
+LIBS:RF-AMP-CNTLR_V1-cache
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 4
+Title "RF Amplifier Controller"
+Date "2019-11-23"
+Rev "1"
+Comp "HB9GKW"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 7325 7800 2050 2375
+U 5CBD59C6
+F0 "CONTROLLER" 50
+F1 "CONTROLLER.sch" 50
+F2 "TXD0_RS" O R 9375 9550 50 
+F3 "RXD0_RS" I R 9375 9650 50 
+F4 "SCL1_LV" O R 9375 8950 50 
+F5 "SCLK0" O R 9375 8050 50 
+F6 "MOSI0" O R 9375 8150 50 
+F7 "MISO0" I R 9375 8250 50 
+F8 "CE0" O R 9375 8350 50 
+F9 "CE1" O R 9375 8450 50 
+F10 "SDA1_LV" B R 9375 9050 50 
+F11 "ANT1" O L 7325 7950 50 
+F12 "ANT2" O L 7325 8050 50 
+F13 "ANT3" O L 7325 8150 50 
+F14 "BAND1" O L 7325 8675 50 
+F15 "BAND2" O L 7325 8775 50 
+F16 "BAND3" O L 7325 8875 50 
+F17 "BAND4" O L 7325 8975 50 
+F18 "BAND5" O L 7325 9075 50 
+F19 "BAND6" O L 7325 9175 50 
+F20 "SCL0_LV" O L 7325 9700 50 
+F21 "SDA0_LV" B L 7325 9800 50 
+F22 "INT_OC" I L 7325 9900 50 
+F23 "INT_OC" I R 9375 9150 50 
+F24 "TXD1_RS" O R 9375 9850 50 
+F25 "RXD1_RS" I R 9375 9950 50 
+$EndSheet
+$Sheet
+S 2575 8200 2050 2000
+U 5E11E288
+F0 "INTERLOCK" 50
+F1 "INTERLOCK.sch" 50
+F2 "FWD3" I L 2575 8300 50 
+F3 "REF3" I L 2575 8725 50 
+F4 "TEMP1" I R 4625 8675 50 
+F5 "RF_OL1" I R 4625 8775 50 
+F6 "FWD1" I R 4625 8875 50 
+F7 "REF1" I R 4625 8975 50 
+F8 "TEMP2" I R 4625 9775 50 
+F9 "RF_OL2" I R 4625 9875 50 
+F10 "FWD2" I R 4625 9975 50 
+F11 "REF2" I R 4625 10075 50 
+F12 "FWD4" I L 2575 9175 50 
+F13 "REF4" I L 2575 9600 50 
+$EndSheet
+$Sheet
+S 2575 5900 2050 2075
+U 5D2BEC5D
+F0 "SEQUENCER" 50
+F1 "SEQUENCER.sch" 50
+F2 "VDD" O R 4625 6025 50 
+F3 "GND_VDD" O R 4625 6300 50 
+F4 "VDD_IN" I L 2575 6025 50 
+F5 "VSS_IN" I L 2575 6300 50 
+F6 "RELAY1" O L 2575 6650 50 
+F7 "RELAY2" O L 2575 7450 50 
+F8 "RELAY1_ON" I L 2575 6750 50 
+F9 "RELAY2_ON" I L 2575 7550 50 
+F10 "ALC" O R 4625 7150 50 
+F11 "PTT" I R 4625 6725 50 
+$EndSheet
+$Comp
+L Converter_ACDC:IRM-20-12 PS?
+U 1 1 5D99E3F4
+P 6300 1475
+AR Path="/5CBB0B33/5D99E3F4" Ref="PS?"  Part="1" 
+AR Path="/5D99E3F4" Ref="PS101"  Part="1" 
+F 0 "PS101" H 6300 1800 50  0000 C CNN
+F 1 "IRM-20-12" H 6300 1709 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_MeanWell_IRM-20-xx_THT" H 6300 1175 50  0001 C CNN
+F 3 "http://www.meanwell.com/Upload/PDF/IRM-20/IRM-20-SPEC.PDF" H 6700 1125 50  0001 C CNN
+	1    6300 1475
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0119
+U 1 1 5D99E402
+P 6700 1575
+AR Path="/5D99E402" Ref="#PWR0119"  Part="1" 
+AR Path="/5C000D65/5D99E402" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D99E402" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0119" H 6700 1325 50  0001 C CNN
+F 1 "Earth" H 6700 1425 50  0001 C CNN
+F 2 "" H 6700 1575 50  0001 C CNN
+F 3 "" H 6700 1575 50  0001 C CNN
+	1    6700 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5D99E408
+P 8300 2900
+AR Path="/5CBB0B33/5D99E408" Ref="#PWR?"  Part="1" 
+AR Path="/5D99E408" Ref="#PWR0137"  Part="1" 
+F 0 "#PWR0137" H 8300 2750 50  0001 C CNN
+F 1 "+5V" H 8315 3073 50  0000 C CNN
+F 2 "" H 8300 2900 50  0001 C CNN
+F 3 "" H 8300 2900 50  0001 C CNN
+	1    8300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5D99E40E
+P 8300 1325
+AR Path="/5CBB0B33/5D99E40E" Ref="#PWR?"  Part="1" 
+AR Path="/5D99E40E" Ref="#PWR0133"  Part="1" 
+F 0 "#PWR0133" H 8300 1175 50  0001 C CNN
+F 1 "+12V" H 8315 1498 50  0000 C CNN
+F 2 "" H 8300 1325 50  0001 C CNN
+F 3 "" H 8300 1325 50  0001 C CNN
+	1    8300 1325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5D99E420
+P 8300 1575
+AR Path="/5CBB0B33/5D99E420" Ref="C?"  Part="1" 
+AR Path="/5D99E420" Ref="C120"  Part="1" 
+F 0 "C120" H 8418 1621 50  0000 L CNN
+F 1 "100u" H 8418 1530 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 8338 1425 50  0001 C CNN
+F 3 "~" H 8300 1575 50  0001 C CNN
+	1    8300 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0134
+U 1 1 5D99E427
+P 8300 1725
+AR Path="/5D99E427" Ref="#PWR0134"  Part="1" 
+AR Path="/5C000D65/5D99E427" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D99E427" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0134" H 8300 1475 50  0001 C CNN
+F 1 "Earth" H 8300 1575 50  0001 C CNN
+F 2 "" H 8300 1725 50  0001 C CNN
+F 3 "" H 8300 1725 50  0001 C CNN
+	1    8300 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D99E42D
+P 8025 1575
+AR Path="/5CBB0B33/5D99E42D" Ref="C?"  Part="1" 
+AR Path="/5D99E42D" Ref="C117"  Part="1" 
+F 0 "C117" H 7750 1625 50  0000 L CNN
+F 1 "100n" H 7750 1525 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8063 1425 50  0001 C CNN
+F 3 "~" H 8025 1575 50  0001 C CNN
+	1    8025 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0130
+U 1 1 5D99E434
+P 8025 1725
+AR Path="/5D99E434" Ref="#PWR0130"  Part="1" 
+AR Path="/5C000D65/5D99E434" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D99E434" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0130" H 8025 1475 50  0001 C CNN
+F 1 "Earth" H 8025 1575 50  0001 C CNN
+F 2 "" H 8025 1725 50  0001 C CNN
+F 3 "" H 8025 1725 50  0001 C CNN
+	1    8025 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L?
+U 1 1 5D99E43A
+P 7700 1375
+AR Path="/5CBB0B33/5D99E43A" Ref="L?"  Part="1" 
+AR Path="/5D99E43A" Ref="L102"  Part="1" 
+F 0 "L102" V 7522 1375 50  0000 C CNN
+F 1 "10u" V 7613 1375 50  0000 C CNN
+F 2 "Inductor_SMD:L_TDK_SLF6045" H 7700 1375 50  0001 C CNN
+F 3 "~" H 7700 1375 50  0001 C CNN
+	1    7700 1375
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 1375 8025 1375
+Wire Wire Line
+	8300 1375 8300 1325
+Wire Wire Line
+	8300 1375 8300 1425
+Connection ~ 8300 1375
+Wire Wire Line
+	8025 1375 8025 1425
+Connection ~ 8025 1375
+Wire Wire Line
+	8025 1375 8300 1375
+Wire Wire Line
+	7550 1375 7375 1375
+$Comp
+L Device:C C?
+U 1 1 5D99E449
+P 7375 1575
+AR Path="/5CBB0B33/5D99E449" Ref="C?"  Part="1" 
+AR Path="/5D99E449" Ref="C114"  Part="1" 
+F 0 "C114" H 7500 1625 50  0000 L CNN
+F 1 "100n" H 7500 1525 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7413 1425 50  0001 C CNN
+F 3 "~" H 7375 1575 50  0001 C CNN
+	1    7375 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0127
+U 1 1 5D99E450
+P 7375 1725
+AR Path="/5D99E450" Ref="#PWR0127"  Part="1" 
+AR Path="/5C000D65/5D99E450" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D99E450" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0127" H 7375 1475 50  0001 C CNN
+F 1 "Earth" H 7375 1575 50  0001 C CNN
+F 2 "" H 7375 1725 50  0001 C CNN
+F 3 "" H 7375 1725 50  0001 C CNN
+	1    7375 1725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7375 1425 7375 1375
+Connection ~ 7375 1375
+Wire Wire Line
+	7375 1375 7100 1375
+$Comp
+L Device:EMI_Filter_CommonMode FL?
+U 1 1 5D99E459
+P 3300 1475
+AR Path="/5CBB0B33/5D99E459" Ref="FL?"  Part="1" 
+AR Path="/5D99E459" Ref="FL101"  Part="1" 
+F 0 "FL101" H 3300 1662 50  0000 C CNN
+F 1 "EMI_Filter_CommonMode" H 3300 1662 50  0001 C CNN
+F 2 "Inductor_THT:Choke_Schaffner_RN202-04-8.8x18.2mm" V 3300 1515 50  0001 C CNN
+F 3 "~" V 3300 1515 50  0000 C CNN
+	1    3300 1475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D99E460
+P 3650 1475
+AR Path="/5CBB0B33/5D99E460" Ref="C?"  Part="1" 
+AR Path="/5D99E460" Ref="C103"  Part="1" 
+F 0 "C103" H 3675 1550 50  0000 L CNN
+F 1 "470n" H 3675 1375 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L13.0mm_W4.0mm_P10.00mm_FKS3_FKP3_MKS4" H 3688 1325 50  0001 C CNN
+F 3 "~" H 3650 1475 50  0001 C CNN
+	1    3650 1475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1375 5900 1375
+Wire Wire Line
+	5800 1575 5900 1575
+$Comp
+L Device:C C?
+U 1 1 5D99E469
+P 2925 1475
+AR Path="/5CBB0B33/5D99E469" Ref="C?"  Part="1" 
+AR Path="/5D99E469" Ref="C102"  Part="1" 
+F 0 "C102" H 2700 1550 50  0000 L CNN
+F 1 "470n" H 2725 1375 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L13.0mm_W4.0mm_P10.00mm_FKS3_FKP3_MKS4" H 2963 1325 50  0001 C CNN
+F 3 "~" H 2925 1475 50  0001 C CNN
+	1    2925 1475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 5D99E506
+P 2300 1250
+AR Path="/5CBB0B33/5D99E506" Ref="F?"  Part="1" 
+AR Path="/5D99E506" Ref="F101"  Part="1" 
+F 0 "F101" V 2103 1250 50  0000 C CNN
+F 1 "0.1AT" V 2194 1250 50  0000 C CNN
+F 2 "Fuse:Fuse_Littelfuse_372_D8.50mm" V 2230 1250 50  0001 C CNN
+F 3 "~" H 2300 1250 50  0001 C CNN
+	1    2300 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 5D99E50D
+P 2300 1350
+AR Path="/5CBB0B33/5D99E50D" Ref="F?"  Part="1" 
+AR Path="/5D99E50D" Ref="F102"  Part="1" 
+F 0 "F102" V 2400 1350 50  0000 C CNN
+F 1 "0.1AT" V 2475 1350 50  0000 C CNN
+F 2 "Fuse:Fuse_Littelfuse_372_D8.50mm" V 2230 1350 50  0001 C CNN
+F 3 "~" H 2300 1350 50  0001 C CNN
+	1    2300 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 1575 3100 1700
+Wire Wire Line
+	3100 1250 3100 1375
+Wire Wire Line
+	2925 1325 2925 1250
+Wire Wire Line
+	2925 1250 3100 1250
+Wire Wire Line
+	2925 1625 2925 1700
+Wire Wire Line
+	2925 1700 3100 1700
+Wire Wire Line
+	3500 1700 3650 1700
+Wire Wire Line
+	3500 1250 3650 1250
+Wire Wire Line
+	5800 1575 5800 1700
+Wire Wire Line
+	5800 1250 5800 1375
+Wire Wire Line
+	3500 1250 3500 1375
+Wire Wire Line
+	3500 1575 3500 1700
+Wire Wire Line
+	3650 1625 3650 1700
+Connection ~ 5475 1700
+Wire Wire Line
+	5475 1700 5800 1700
+Wire Wire Line
+	3650 1325 3650 1250
+$Comp
+L Connector:Screw_Terminal_01x06 J?
+U 1 1 5D99E527
+P 1875 1450
+AR Path="/5CBB0B33/5D99E527" Ref="J?"  Part="1" 
+AR Path="/5D99E527" Ref="J101"  Part="1" 
+F 0 "J101" H 1875 1775 50  0000 C CNN
+F 1 "VAC" H 2075 1450 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-6-5.08_1x06_P5.08mm_Horizontal" H 1875 1450 50  0001 C CNN
+F 3 "~" H 1875 1450 50  0001 C CNN
+	1    1875 1450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2075 1250 2150 1250
+Wire Wire Line
+	2075 1350 2150 1350
+$Comp
+L Connector:Screw_Terminal_01x06 J?
+U 1 1 5D99E549
+P 1875 2275
+AR Path="/5CBB0B33/5D99E549" Ref="J?"  Part="1" 
+AR Path="/5D99E549" Ref="J102"  Part="1" 
+F 0 "J102" H 1875 2600 50  0000 C CNN
+F 1 "VDC" H 2050 2275 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-6-5.08_1x06_P5.08mm_Horizontal" H 1875 2275 50  0001 C CNN
+F 3 "~" H 1875 2275 50  0001 C CNN
+	1    1875 2275
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0105
+U 1 1 5D99E58C
+P 2125 2175
+AR Path="/5D99E58C" Ref="#PWR0105"  Part="1" 
+AR Path="/5C000D65/5D99E58C" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D99E58C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0105" H 2125 1925 50  0001 C CNN
+F 1 "Earth" H 2125 2025 50  0001 C CNN
+F 2 "" H 2125 2175 50  0001 C CNN
+F 3 "" H 2125 2175 50  0001 C CNN
+	1    2125 2175
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2125 2175 2075 2175
+$Comp
+L power:+12V #PWR?
+U 1 1 5D99E593
+P 2125 2075
+AR Path="/5CBB0B33/5D99E593" Ref="#PWR?"  Part="1" 
+AR Path="/5D99E593" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 2125 1925 50  0001 C CNN
+F 1 "+12V" V 2125 2325 50  0000 C CNN
+F 2 "" H 2125 2075 50  0001 C CNN
+F 3 "" H 2125 2075 50  0001 C CNN
+	1    2125 2075
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2075 2275 2125 2275
+$Comp
+L power:+5V #PWR?
+U 1 1 5D99E5A9
+P 2125 2475
+AR Path="/5CBB0B33/5D99E5A9" Ref="#PWR?"  Part="1" 
+AR Path="/5D99E5A9" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 2125 2325 50  0001 C CNN
+F 1 "+5V" V 2125 2750 50  0000 C CNN
+F 2 "" H 2125 2475 50  0001 C CNN
+F 3 "" H 2125 2475 50  0001 C CNN
+	1    2125 2475
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0107
+U 1 1 5D99E5AF
+P 2125 2375
+AR Path="/5D99E5AF" Ref="#PWR0107"  Part="1" 
+AR Path="/5C000D65/5D99E5AF" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D99E5AF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0107" H 2125 2125 50  0001 C CNN
+F 1 "Earth" H 2125 2225 50  0001 C CNN
+F 2 "" H 2125 2375 50  0001 C CNN
+F 3 "" H 2125 2375 50  0001 C CNN
+	1    2125 2375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2125 2375 2075 2375
+Wire Wire Line
+	2125 2475 2075 2475
+$Comp
+L power:Earth #PWR0109
+U 1 1 5D99E5B7
+P 2125 2575
+AR Path="/5D99E5B7" Ref="#PWR0109"  Part="1" 
+AR Path="/5C000D65/5D99E5B7" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D99E5B7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0109" H 2125 2325 50  0001 C CNN
+F 1 "Earth" H 2125 2425 50  0001 C CNN
+F 2 "" H 2125 2575 50  0001 C CNN
+F 3 "" H 2125 2575 50  0001 C CNN
+	1    2125 2575
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2125 2575 2075 2575
+$Comp
+L Device:LED D?
+U 1 1 5D99E5BE
+P 8725 1575
+AR Path="/5CBB0B33/5D99E5BE" Ref="D?"  Part="1" 
+AR Path="/5D99E5BE" Ref="D102"  Part="1" 
+F 0 "D102" V 8763 1458 50  0000 R CNN
+F 1 "Power" V 8672 1458 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 8725 1575 50  0001 C CNN
+F 3 "~" H 8725 1575 50  0001 C CNN
+	1    8725 1575
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D99E5C5
+P 8725 1925
+AR Path="/5CBB0B33/5D99E5C5" Ref="R?"  Part="1" 
+AR Path="/5D99E5C5" Ref="R104"  Part="1" 
+F 0 "R104" H 8795 1971 50  0000 L CNN
+F 1 "2k2" H 8795 1880 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8655 1925 50  0001 C CNN
+F 3 "~" H 8725 1925 50  0001 C CNN
+	1    8725 1925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8725 1775 8725 1725
+$Comp
+L power:Earth #PWR0153
+U 1 1 5D3ABAE0
+P 2300 8500
+AR Path="/5D3ABAE0" Ref="#PWR0153"  Part="1" 
+AR Path="/5C000D65/5D3ABAE0" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D3ABAE0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0153" H 2300 8250 50  0001 C CNN
+F 1 "Earth" H 2300 8350 50  0001 C CNN
+F 2 "" H 2300 8500 50  0001 C CNN
+F 3 "" H 2300 8500 50  0001 C CNN
+	1    2300 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J112
+U 1 1 5D3ABE41
+P 2300 8300
+F 0 "J112" H 2450 8400 50  0000 C CNN
+F 1 "FWD3" H 2475 8300 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 2300 8300 50  0001 C CNN
+F 3 " ~" H 2300 8300 50  0001 C CNN
+	1    2300 8300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0154
+U 1 1 5D3B5711
+P 2300 8925
+AR Path="/5D3B5711" Ref="#PWR0154"  Part="1" 
+AR Path="/5C000D65/5D3B5711" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D3B5711" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0154" H 2300 8675 50  0001 C CNN
+F 1 "Earth" H 2300 8775 50  0001 C CNN
+F 2 "" H 2300 8925 50  0001 C CNN
+F 3 "" H 2300 8925 50  0001 C CNN
+	1    2300 8925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J113
+U 1 1 5D3B5717
+P 2300 8725
+F 0 "J113" H 2450 8825 50  0000 C CNN
+F 1 "REF3" H 2475 8725 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 2300 8725 50  0001 C CNN
+F 3 " ~" H 2300 8725 50  0001 C CNN
+	1    2300 8725
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 8300 2575 8300
+Wire Wire Line
+	2500 8725 2575 8725
+$Comp
+L power:+12V #PWR?
+U 1 1 5D41BC56
+P 5150 8225
+AR Path="/5CBB0B33/5D41BC56" Ref="#PWR?"  Part="1" 
+AR Path="/5D41BC56" Ref="#PWR0175"  Part="1" 
+F 0 "#PWR0175" H 5150 8075 50  0001 C CNN
+F 1 "+12V" H 5165 8398 50  0000 C CNN
+F 2 "" H 5150 8225 50  0001 C CNN
+F 3 "" H 5150 8225 50  0001 C CNN
+	1    5150 8225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 8275 5200 8275
+$Comp
+L power:+12V #PWR?
+U 1 1 5D420118
+P 5150 9325
+AR Path="/5CBB0B33/5D420118" Ref="#PWR?"  Part="1" 
+AR Path="/5D420118" Ref="#PWR0176"  Part="1" 
+F 0 "#PWR0176" H 5150 9175 50  0001 C CNN
+F 1 "+12V" H 5165 9498 50  0000 C CNN
+F 2 "" H 5150 9325 50  0001 C CNN
+F 3 "" H 5150 9325 50  0001 C CNN
+	1    5150 9325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0178
+U 1 1 5D424E29
+P 5200 9575
+AR Path="/5D424E29" Ref="#PWR0178"  Part="1" 
+AR Path="/5C000D65/5D424E29" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D424E29" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0178" H 5200 9325 50  0001 C CNN
+F 1 "Earth" H 5200 9425 50  0001 C CNN
+F 2 "" H 5200 9575 50  0001 C CNN
+F 3 "" H 5200 9575 50  0001 C CNN
+	1    5200 9575
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4625 8675 5200 8675
+Wire Wire Line
+	4625 8775 5200 8775
+Wire Wire Line
+	4625 8875 5200 8875
+Wire Wire Line
+	4625 8975 5200 8975
+$Comp
+L power:Earth #PWR0184
+U 1 1 5D455B85
+P 5700 8975
+AR Path="/5D455B85" Ref="#PWR0184"  Part="1" 
+AR Path="/5C000D65/5D455B85" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D455B85" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0184" H 5700 8725 50  0001 C CNN
+F 1 "Earth" H 5700 8825 50  0001 C CNN
+F 2 "" H 5700 8975 50  0001 C CNN
+F 3 "" H 5700 8975 50  0001 C CNN
+	1    5700 8975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5D3E9E7E
+P 7100 1575
+AR Path="/5CBB0B33/5D3E9E7E" Ref="C?"  Part="1" 
+AR Path="/5D3E9E7E" Ref="C111"  Part="1" 
+F 0 "C111" H 6825 1650 50  0000 L CNN
+F 1 "100u" H 6850 1500 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 7138 1425 50  0001 C CNN
+F 3 "~" H 7100 1575 50  0001 C CNN
+	1    7100 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0124
+U 1 1 5D3E9E84
+P 7100 1725
+AR Path="/5D3E9E84" Ref="#PWR0124"  Part="1" 
+AR Path="/5C000D65/5D3E9E84" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D3E9E84" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0124" H 7100 1475 50  0001 C CNN
+F 1 "Earth" H 7100 1575 50  0001 C CNN
+F 2 "" H 7100 1725 50  0001 C CNN
+F 3 "" H 7100 1725 50  0001 C CNN
+	1    7100 1725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1425 7100 1375
+Connection ~ 7100 1375
+Wire Wire Line
+	7100 1375 6825 1375
+$Comp
+L Converter_ACDC:IRM-20-12 PS?
+U 1 1 5D3F9ED5
+P 6300 2050
+AR Path="/5CBB0B33/5D3F9ED5" Ref="PS?"  Part="1" 
+AR Path="/5D3F9ED5" Ref="PS102"  Part="1" 
+F 0 "PS102" H 6300 2375 50  0000 C CNN
+F 1 "IRM-20-12" H 6300 2284 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_MeanWell_IRM-20-xx_THT" H 6300 1750 50  0001 C CNN
+F 3 "http://www.meanwell.com/Upload/PDF/IRM-20/IRM-20-SPEC.PDF" H 6700 1700 50  0001 C CNN
+	1    6300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0120
+U 1 1 5D3F9EDB
+P 6700 1950
+AR Path="/5D3F9EDB" Ref="#PWR0120"  Part="1" 
+AR Path="/5C000D65/5D3F9EDB" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D3F9EDB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0120" H 6700 1700 50  0001 C CNN
+F 1 "Earth" H 6700 1800 50  0001 C CNN
+F 2 "" H 6700 1950 50  0001 C CNN
+F 3 "" H 6700 1950 50  0001 C CNN
+	1    6700 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5D3F9EE7
+P 8300 2350
+AR Path="/5CBB0B33/5D3F9EE7" Ref="C?"  Part="1" 
+AR Path="/5D3F9EE7" Ref="C121"  Part="1" 
+F 0 "C121" H 7975 2300 50  0000 L CNN
+F 1 "100u" H 7975 2400 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 8338 2200 50  0001 C CNN
+F 3 "~" H 8300 2350 50  0001 C CNN
+	1    8300 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0136
+U 1 1 5D3F9EED
+P 8300 2500
+AR Path="/5D3F9EED" Ref="#PWR0136"  Part="1" 
+AR Path="/5C000D65/5D3F9EED" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D3F9EED" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0136" H 8300 2250 50  0001 C CNN
+F 1 "Earth" H 8300 2350 50  0001 C CNN
+F 2 "" H 8300 2500 50  0001 C CNN
+F 3 "" H 8300 2500 50  0001 C CNN
+	1    8300 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D3F9EF3
+P 8025 2350
+AR Path="/5CBB0B33/5D3F9EF3" Ref="C?"  Part="1" 
+AR Path="/5D3F9EF3" Ref="C118"  Part="1" 
+F 0 "C118" H 7725 2400 50  0000 L CNN
+F 1 "100n" H 7750 2300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8063 2200 50  0001 C CNN
+F 3 "~" H 8025 2350 50  0001 C CNN
+	1    8025 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0131
+U 1 1 5D3F9EF9
+P 8025 2500
+AR Path="/5D3F9EF9" Ref="#PWR0131"  Part="1" 
+AR Path="/5C000D65/5D3F9EF9" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D3F9EF9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0131" H 8025 2250 50  0001 C CNN
+F 1 "Earth" H 8025 2350 50  0001 C CNN
+F 2 "" H 8025 2500 50  0001 C CNN
+F 3 "" H 8025 2500 50  0001 C CNN
+	1    8025 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L?
+U 1 1 5D3F9EFF
+P 7700 2150
+AR Path="/5CBB0B33/5D3F9EFF" Ref="L?"  Part="1" 
+AR Path="/5D3F9EFF" Ref="L103"  Part="1" 
+F 0 "L103" V 7522 2150 50  0000 C CNN
+F 1 "10u" V 7613 2150 50  0000 C CNN
+F 2 "Inductor_SMD:L_TDK_SLF6045" H 7700 2150 50  0001 C CNN
+F 3 "~" H 7700 2150 50  0001 C CNN
+	1    7700 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 2150 8025 2150
+Wire Wire Line
+	8300 2150 8300 2100
+Wire Wire Line
+	8300 2150 8300 2200
+Connection ~ 8300 2150
+Wire Wire Line
+	8025 2150 8025 2200
+Connection ~ 8025 2150
+Wire Wire Line
+	8025 2150 8300 2150
+Wire Wire Line
+	7550 2150 7375 2150
+$Comp
+L Device:C C?
+U 1 1 5D3F9F0D
+P 7375 2350
+AR Path="/5CBB0B33/5D3F9F0D" Ref="C?"  Part="1" 
+AR Path="/5D3F9F0D" Ref="C115"  Part="1" 
+F 0 "C115" H 7500 2400 50  0000 L CNN
+F 1 "100n" H 7500 2300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7413 2200 50  0001 C CNN
+F 3 "~" H 7375 2350 50  0001 C CNN
+	1    7375 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0128
+U 1 1 5D3F9F13
+P 7375 2500
+AR Path="/5D3F9F13" Ref="#PWR0128"  Part="1" 
+AR Path="/5C000D65/5D3F9F13" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D3F9F13" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0128" H 7375 2250 50  0001 C CNN
+F 1 "Earth" H 7375 2350 50  0001 C CNN
+F 2 "" H 7375 2500 50  0001 C CNN
+F 3 "" H 7375 2500 50  0001 C CNN
+	1    7375 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7375 2200 7375 2150
+Connection ~ 7375 2150
+Wire Wire Line
+	7375 2150 7100 2150
+$Comp
+L Device:CP C?
+U 1 1 5D3F9F1D
+P 7100 2350
+AR Path="/5CBB0B33/5D3F9F1D" Ref="C?"  Part="1" 
+AR Path="/5D3F9F1D" Ref="C112"  Part="1" 
+F 0 "C112" H 7250 2275 50  0000 L CNN
+F 1 "100u" H 7175 2425 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 7138 2200 50  0001 C CNN
+F 3 "~" H 7100 2350 50  0001 C CNN
+	1    7100 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0125
+U 1 1 5D3F9F23
+P 7100 2500
+AR Path="/5D3F9F23" Ref="#PWR0125"  Part="1" 
+AR Path="/5C000D65/5D3F9F23" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D3F9F23" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0125" H 7100 2250 50  0001 C CNN
+F 1 "Earth" H 7100 2350 50  0001 C CNN
+F 2 "" H 7100 2500 50  0001 C CNN
+F 3 "" H 7100 2500 50  0001 C CNN
+	1    7100 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2200 7100 2150
+Connection ~ 7100 2150
+Wire Wire Line
+	7100 2150 6825 2150
+$Comp
+L power:-12V #PWR0135
+U 1 1 5D41B9BE
+P 8300 2100
+F 0 "#PWR0135" H 8300 2200 50  0001 C CNN
+F 1 "-12V" H 8315 2273 50  0000 C CNN
+F 2 "" H 8300 2100 50  0001 C CNN
+F 3 "" H 8300 2100 50  0001 C CNN
+	1    8300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 2150 5900 2150
+Wire Wire Line
+	5675 1250 5675 1950
+Wire Wire Line
+	5675 1950 5900 1950
+Connection ~ 5675 1250
+Wire Wire Line
+	5675 1250 5800 1250
+$Comp
+L power:-12V #PWR0106
+U 1 1 5D43604F
+P 2125 2275
+F 0 "#PWR0106" H 2125 2375 50  0001 C CNN
+F 1 "-12V" V 2125 2425 50  0000 L CNN
+F 2 "" H 2125 2275 50  0001 C CNN
+F 3 "" H 2125 2275 50  0001 C CNN
+	1    2125 2275
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2125 2075 2075 2075
+$Comp
+L power:Earth #PWR0155
+U 1 1 5D5602D9
+P 2300 9375
+AR Path="/5D5602D9" Ref="#PWR0155"  Part="1" 
+AR Path="/5C000D65/5D5602D9" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D5602D9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0155" H 2300 9125 50  0001 C CNN
+F 1 "Earth" H 2300 9225 50  0001 C CNN
+F 2 "" H 2300 9375 50  0001 C CNN
+F 3 "" H 2300 9375 50  0001 C CNN
+	1    2300 9375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J114
+U 1 1 5D5602DF
+P 2300 9175
+F 0 "J114" H 2450 9275 50  0000 C CNN
+F 1 "FWD4" H 2475 9175 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 2300 9175 50  0001 C CNN
+F 3 " ~" H 2300 9175 50  0001 C CNN
+	1    2300 9175
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0156
+U 1 1 5D5602E5
+P 2300 9800
+AR Path="/5D5602E5" Ref="#PWR0156"  Part="1" 
+AR Path="/5C000D65/5D5602E5" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D5602E5" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0156" H 2300 9550 50  0001 C CNN
+F 1 "Earth" H 2300 9650 50  0001 C CNN
+F 2 "" H 2300 9800 50  0001 C CNN
+F 3 "" H 2300 9800 50  0001 C CNN
+	1    2300 9800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J115
+U 1 1 5D5602EB
+P 2300 9600
+F 0 "J115" H 2450 9700 50  0000 C CNN
+F 1 "REF4" H 2475 9600 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 2300 9600 50  0001 C CNN
+F 3 " ~" H 2300 9600 50  0001 C CNN
+	1    2300 9600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 9175 2575 9175
+Wire Wire Line
+	2500 9600 2575 9600
+$Comp
+L Converter_ACDC:IRM-20-5 PS103
+U 1 1 5D5607F6
+P 6300 3050
+F 0 "PS103" H 6300 3375 50  0000 C CNN
+F 1 "IRM-20-5" H 6300 3284 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_MeanWell_IRM-20-xx_THT" H 6300 2750 50  0001 C CNN
+F 3 "http://www.meanwell.com/Upload/PDF/IRM-20/IRM-20-SPEC.PDF" H 6700 2700 50  0001 C CNN
+	1    6300 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 2150 5475 2325
+Wire Wire Line
+	5475 3150 5900 3150
+Connection ~ 5475 2150
+Wire Wire Line
+	5900 2950 5675 2950
+Connection ~ 5675 1950
+$Comp
+L power:Earth #PWR0121
+U 1 1 5D57712E
+P 6700 3150
+AR Path="/5D57712E" Ref="#PWR0121"  Part="1" 
+AR Path="/5C000D65/5D57712E" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D57712E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0121" H 6700 2900 50  0001 C CNN
+F 1 "Earth" H 6700 3000 50  0001 C CNN
+F 2 "" H 6700 3150 50  0001 C CNN
+F 3 "" H 6700 3150 50  0001 C CNN
+	1    6700 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5D586DF5
+P 8300 3150
+AR Path="/5CBB0B33/5D586DF5" Ref="C?"  Part="1" 
+AR Path="/5D586DF5" Ref="C122"  Part="1" 
+F 0 "C122" H 8418 3196 50  0000 L CNN
+F 1 "100u" H 8418 3105 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 8338 3000 50  0001 C CNN
+F 3 "~" H 8300 3150 50  0001 C CNN
+	1    8300 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0138
+U 1 1 5D586DFB
+P 8300 3300
+AR Path="/5D586DFB" Ref="#PWR0138"  Part="1" 
+AR Path="/5C000D65/5D586DFB" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D586DFB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0138" H 8300 3050 50  0001 C CNN
+F 1 "Earth" H 8300 3150 50  0001 C CNN
+F 2 "" H 8300 3300 50  0001 C CNN
+F 3 "" H 8300 3300 50  0001 C CNN
+	1    8300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D586E01
+P 8025 3150
+AR Path="/5CBB0B33/5D586E01" Ref="C?"  Part="1" 
+AR Path="/5D586E01" Ref="C119"  Part="1" 
+F 0 "C119" H 7725 3200 50  0000 L CNN
+F 1 "100n" H 7750 3100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8063 3000 50  0001 C CNN
+F 3 "~" H 8025 3150 50  0001 C CNN
+	1    8025 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0132
+U 1 1 5D586E07
+P 8025 3300
+AR Path="/5D586E07" Ref="#PWR0132"  Part="1" 
+AR Path="/5C000D65/5D586E07" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D586E07" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0132" H 8025 3050 50  0001 C CNN
+F 1 "Earth" H 8025 3150 50  0001 C CNN
+F 2 "" H 8025 3300 50  0001 C CNN
+F 3 "" H 8025 3300 50  0001 C CNN
+	1    8025 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L?
+U 1 1 5D586E0D
+P 7700 2950
+AR Path="/5CBB0B33/5D586E0D" Ref="L?"  Part="1" 
+AR Path="/5D586E0D" Ref="L104"  Part="1" 
+F 0 "L104" V 7522 2950 50  0000 C CNN
+F 1 "10u" V 7613 2950 50  0000 C CNN
+F 2 "Inductor_SMD:L_TDK_SLF6045" H 7700 2950 50  0001 C CNN
+F 3 "~" H 7700 2950 50  0001 C CNN
+	1    7700 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 2950 8025 2950
+Wire Wire Line
+	8300 2950 8300 3000
+Wire Wire Line
+	8025 2950 8025 3000
+Connection ~ 8025 2950
+Wire Wire Line
+	8025 2950 8300 2950
+Wire Wire Line
+	7550 2950 7375 2950
+$Comp
+L Device:C C?
+U 1 1 5D586E1B
+P 7375 3150
+AR Path="/5CBB0B33/5D586E1B" Ref="C?"  Part="1" 
+AR Path="/5D586E1B" Ref="C116"  Part="1" 
+F 0 "C116" H 7500 3200 50  0000 L CNN
+F 1 "100n" H 7500 3100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7413 3000 50  0001 C CNN
+F 3 "~" H 7375 3150 50  0001 C CNN
+	1    7375 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0129
+U 1 1 5D586E21
+P 7375 3300
+AR Path="/5D586E21" Ref="#PWR0129"  Part="1" 
+AR Path="/5C000D65/5D586E21" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D586E21" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0129" H 7375 3050 50  0001 C CNN
+F 1 "Earth" H 7375 3150 50  0001 C CNN
+F 2 "" H 7375 3300 50  0001 C CNN
+F 3 "" H 7375 3300 50  0001 C CNN
+	1    7375 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7375 3000 7375 2950
+Connection ~ 7375 2950
+Wire Wire Line
+	7375 2950 7100 2950
+$Comp
+L Device:CP C?
+U 1 1 5D586E2A
+P 7100 3150
+AR Path="/5CBB0B33/5D586E2A" Ref="C?"  Part="1" 
+AR Path="/5D586E2A" Ref="C113"  Part="1" 
+F 0 "C113" H 6825 3225 50  0000 L CNN
+F 1 "100u" H 6850 3075 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 7138 3000 50  0001 C CNN
+F 3 "~" H 7100 3150 50  0001 C CNN
+	1    7100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0126
+U 1 1 5D586E30
+P 7100 3300
+AR Path="/5D586E30" Ref="#PWR0126"  Part="1" 
+AR Path="/5C000D65/5D586E30" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D586E30" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0126" H 7100 3050 50  0001 C CNN
+F 1 "Earth" H 7100 3150 50  0001 C CNN
+F 2 "" H 7100 3300 50  0001 C CNN
+F 3 "" H 7100 3300 50  0001 C CNN
+	1    7100 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3000 7100 2950
+Connection ~ 7100 2950
+Wire Wire Line
+	7100 2950 6825 2950
+Wire Wire Line
+	8300 2900 8300 2950
+Connection ~ 8300 2950
+Wire Wire Line
+	8300 1375 8725 1375
+Wire Wire Line
+	8725 1375 8725 1425
+Wire Wire Line
+	8725 2075 8725 2150
+Wire Wire Line
+	8725 2150 8300 2150
+$Comp
+L Connector:Screw_Terminal_01x01 J108
+U 1 1 5D585B6C
+P 2200 6025
+F 0 "J108" H 2425 5950 50  0000 C CNN
+F 1 "VDD_IN" H 2450 6025 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360425_1x01_Horizontal_ScrewM4.0_Boxed" H 2200 6025 50  0001 C CNN
+F 3 "~" H 2200 6025 50  0001 C CNN
+	1    2200 6025
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 6025 2575 6025
+Wire Wire Line
+	2400 6300 2575 6300
+$Comp
+L Connector:Screw_Terminal_01x01 J109
+U 1 1 5D592D96
+P 2200 6300
+F 0 "J109" H 2450 6225 50  0000 C CNN
+F 1 "VSS_IN" H 2450 6300 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360425_1x01_Horizontal_ScrewM4.0_Boxed" H 2200 6300 50  0001 C CNN
+F 3 "~" H 2200 6300 50  0001 C CNN
+	1    2200 6300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J118
+U 1 1 5D594CB7
+P 5000 6025
+F 0 "J118" H 5075 6025 50  0000 L CNN
+F 1 "VDD_AMP" H 5300 6025 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360425_1x01_Horizontal_ScrewM4.0_Boxed" H 5000 6025 50  0001 C CNN
+F 3 "~" H 5000 6025 50  0001 C CNN
+	1    5000 6025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J119
+U 1 1 5D59973D
+P 5000 6300
+F 0 "J119" H 5075 6300 50  0000 L CNN
+F 1 "GND_AMP" H 5300 6300 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360425_1x01_Horizontal_ScrewM4.0_Boxed" H 5000 6300 50  0001 C CNN
+F 3 "~" H 5000 6300 50  0001 C CNN
+	1    5000 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 1250
+Connection ~ 3650 1700
+Wire Wire Line
+	3650 1250 5675 1250
+$Comp
+L Converter_DCDC:ITQ2412SA PS104
+U 1 1 5D5B299E
+P 6300 3725
+F 0 "PS104" H 6300 4103 50  0000 C CNN
+F 1 "ITQ2412SA" H 6300 4012 50  0000 C CNN
+F 2 "my-library-footprints:Converter_DCDC_XP_POWER-ITXxxxxSA_THT" H 5250 3475 50  0001 L CNN
+F 3 "https://www.xppower.com/pdfs/SF_ITQ.pdf" H 7350 3425 50  0001 L CNN
+	1    6300 3725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J103
+U 1 1 5D58CA9B
+P 1875 2925
+F 0 "J103" H 1875 3050 50  0000 C CNN
+F 1 "ext_13V8" H 2150 2875 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal" H 1875 2925 50  0001 C CNN
+F 3 "~" H 1875 2925 50  0001 C CNN
+	1    1875 2925
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0123
+U 1 1 5D599A32
+P 6700 4775
+AR Path="/5D599A32" Ref="#PWR0123"  Part="1" 
+AR Path="/5C000D65/5D599A32" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D599A32" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0123" H 6700 4525 50  0001 C CNN
+F 1 "Earth" H 6700 4625 50  0001 C CNN
+F 2 "" H 6700 4775 50  0001 C CNN
+F 3 "" H 6700 4775 50  0001 C CNN
+	1    6700 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0122
+U 1 1 5D599AE5
+P 6700 3625
+AR Path="/5D599AE5" Ref="#PWR0122"  Part="1" 
+AR Path="/5C000D65/5D599AE5" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D599AE5" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0122" H 6700 3375 50  0001 C CNN
+F 1 "Earth" H 6700 3475 50  0001 C CNN
+F 2 "" H 6700 3625 50  0001 C CNN
+F 3 "" H 6700 3625 50  0001 C CNN
+	1    6700 3625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5D59BBDE
+P 5475 4325
+AR Path="/5CBB0B33/5D59BBDE" Ref="C?"  Part="1" 
+AR Path="/5D59BBDE" Ref="C110"  Part="1" 
+F 0 "C110" H 5593 4371 50  0000 L CNN
+F 1 "100u" H 5593 4280 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 5513 4175 50  0001 C CNN
+F 3 "~" H 5475 4325 50  0001 C CNN
+	1    5475 4325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0116
+U 1 1 5D59BBE4
+P 5475 4475
+AR Path="/5D59BBE4" Ref="#PWR0116"  Part="1" 
+AR Path="/5C000D65/5D59BBE4" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D59BBE4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0116" H 5475 4225 50  0001 C CNN
+F 1 "Earth" H 5475 4325 50  0001 C CNN
+F 2 "" H 5475 4475 50  0001 C CNN
+F 3 "" H 5475 4475 50  0001 C CNN
+	1    5475 4475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D59BBEA
+P 5200 4325
+AR Path="/5CBB0B33/5D59BBEA" Ref="C?"  Part="1" 
+AR Path="/5D59BBEA" Ref="C107"  Part="1" 
+F 0 "C107" H 4925 4375 50  0000 L CNN
+F 1 "100n" H 4925 4275 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5238 4175 50  0001 C CNN
+F 3 "~" H 5200 4325 50  0001 C CNN
+	1    5200 4325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0115
+U 1 1 5D59BBF0
+P 5200 4475
+AR Path="/5D59BBF0" Ref="#PWR0115"  Part="1" 
+AR Path="/5C000D65/5D59BBF0" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D59BBF0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0115" H 5200 4225 50  0001 C CNN
+F 1 "Earth" H 5200 4325 50  0001 C CNN
+F 2 "" H 5200 4475 50  0001 C CNN
+F 3 "" H 5200 4475 50  0001 C CNN
+	1    5200 4475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L?
+U 1 1 5D59BBF6
+P 4875 4125
+AR Path="/5CBB0B33/5D59BBF6" Ref="L?"  Part="1" 
+AR Path="/5D59BBF6" Ref="L101"  Part="1" 
+F 0 "L101" V 4697 4125 50  0000 C CNN
+F 1 "10u" V 4788 4125 50  0000 C CNN
+F 2 "Inductor_SMD:L_TDK_SLF6045" H 4875 4125 50  0001 C CNN
+F 3 "~" H 4875 4125 50  0001 C CNN
+	1    4875 4125
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5025 4125 5200 4125
+Wire Wire Line
+	5475 4125 5475 4175
+Wire Wire Line
+	5200 4125 5200 4175
+Connection ~ 5200 4125
+Wire Wire Line
+	5200 4125 5475 4125
+Wire Wire Line
+	4725 4125 4550 4125
+$Comp
+L Device:C C?
+U 1 1 5D59BC02
+P 4550 4325
+AR Path="/5CBB0B33/5D59BC02" Ref="C?"  Part="1" 
+AR Path="/5D59BC02" Ref="C106"  Part="1" 
+F 0 "C106" H 4675 4375 50  0000 L CNN
+F 1 "100n" H 4675 4275 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4588 4175 50  0001 C CNN
+F 3 "~" H 4550 4325 50  0001 C CNN
+	1    4550 4325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0114
+U 1 1 5D59BC08
+P 4550 4475
+AR Path="/5D59BC08" Ref="#PWR0114"  Part="1" 
+AR Path="/5C000D65/5D59BC08" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D59BC08" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0114" H 4550 4225 50  0001 C CNN
+F 1 "Earth" H 4550 4325 50  0001 C CNN
+F 2 "" H 4550 4475 50  0001 C CNN
+F 3 "" H 4550 4475 50  0001 C CNN
+	1    4550 4475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4175 4550 4125
+Connection ~ 4550 4125
+Wire Wire Line
+	4550 4125 4250 4125
+$Comp
+L Device:CP C?
+U 1 1 5D59BC11
+P 4250 4325
+AR Path="/5CBB0B33/5D59BC11" Ref="C?"  Part="1" 
+AR Path="/5D59BC11" Ref="C104"  Part="1" 
+F 0 "C104" H 3975 4425 50  0000 L CNN
+F 1 "100u" H 4000 4250 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 4288 4175 50  0001 C CNN
+F 3 "~" H 4250 4325 50  0001 C CNN
+	1    4250 4325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0113
+U 1 1 5D59BC17
+P 4250 4475
+AR Path="/5D59BC17" Ref="#PWR0113"  Part="1" 
+AR Path="/5C000D65/5D59BC17" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D59BC17" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0113" H 4250 4225 50  0001 C CNN
+F 1 "Earth" H 4250 4325 50  0001 C CNN
+F 2 "" H 4250 4475 50  0001 C CNN
+F 3 "" H 4250 4475 50  0001 C CNN
+	1    4250 4475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4175 4250 4125
+Wire Wire Line
+	5475 4125 5475 3625
+Wire Wire Line
+	5475 3625 5900 3625
+Connection ~ 5475 4125
+Wire Wire Line
+	5900 4575 5825 4575
+Wire Wire Line
+	5825 4575 5825 4125
+Wire Wire Line
+	5475 4125 5825 4125
+$Comp
+L power:Earth #PWR0117
+U 1 1 5D5B9FA3
+P 5900 3825
+AR Path="/5D5B9FA3" Ref="#PWR0117"  Part="1" 
+AR Path="/5C000D65/5D5B9FA3" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D5B9FA3" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0117" H 5900 3575 50  0001 C CNN
+F 1 "Earth" H 5900 3675 50  0001 C CNN
+F 2 "" H 5900 3825 50  0001 C CNN
+F 3 "" H 5900 3825 50  0001 C CNN
+	1    5900 3825
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0118
+U 1 1 5D5BA03B
+P 5900 4775
+AR Path="/5D5BA03B" Ref="#PWR0118"  Part="1" 
+AR Path="/5C000D65/5D5BA03B" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D5BA03B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0118" H 5900 4525 50  0001 C CNN
+F 1 "Earth" H 5900 4625 50  0001 C CNN
+F 2 "" H 5900 4775 50  0001 C CNN
+F 3 "" H 5900 4775 50  0001 C CNN
+	1    5900 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:KA378R12C U101
+U 1 1 5D625685
+P 3300 2375
+F 0 "U101" H 3300 2717 50  0000 C CNN
+F 1 "KA378R12C" H 3300 2626 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-4_Vertical" H 3300 2675 50  0001 C CIN
+F 3 "https://www.fairchildsemi.com/datasheets/KA/KA378R12CTU.pdf" H 3300 2475 50  0001 C CNN
+	1    3300 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0111
+U 1 1 5D625939
+P 3300 2675
+AR Path="/5D625939" Ref="#PWR0111"  Part="1" 
+AR Path="/5C000D65/5D625939" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D625939" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0111" H 3300 2425 50  0001 C CNN
+F 1 "Earth" H 3300 2525 50  0001 C CNN
+F 2 "" H 3300 2675 50  0001 C CNN
+F 3 "" H 3300 2675 50  0001 C CNN
+	1    3300 2675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2275 2575 2275
+$Comp
+L Device:C C?
+U 1 1 5D650A02
+P 2375 3125
+AR Path="/5CBB0B33/5D650A02" Ref="C?"  Part="1" 
+AR Path="/5D650A02" Ref="C101"  Part="1" 
+F 0 "C101" H 2175 3225 50  0000 L CNN
+F 1 "100n" H 2175 3025 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2413 2975 50  0001 C CNN
+F 3 "~" H 2375 3125 50  0001 C CNN
+	1    2375 3125
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0110
+U 1 1 5D650A08
+P 2375 3275
+AR Path="/5D650A08" Ref="#PWR0110"  Part="1" 
+AR Path="/5C000D65/5D650A08" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D650A08" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0110" H 2375 3025 50  0001 C CNN
+F 1 "Earth" H 2375 3125 50  0001 C CNN
+F 2 "" H 2375 3275 50  0001 C CNN
+F 3 "" H 2375 3275 50  0001 C CNN
+	1    2375 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2375 2925 2375 2975
+Connection ~ 2375 2925
+Wire Wire Line
+	2375 2925 2075 2925
+$Comp
+L power:Earth #PWR0103
+U 1 1 5D68A462
+P 2075 3025
+AR Path="/5D68A462" Ref="#PWR0103"  Part="1" 
+AR Path="/5C000D65/5D68A462" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D68A462" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0103" H 2075 2775 50  0001 C CNN
+F 1 "Earth" H 2075 2875 50  0001 C CNN
+F 2 "" H 2075 3025 50  0001 C CNN
+F 3 "" H 2075 3025 50  0001 C CNN
+	1    2075 3025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2575 2925 2575 3725
+Wire Wire Line
+	2575 4125 4250 4125
+Wire Wire Line
+	2575 2925 2375 2925
+Connection ~ 4250 4125
+Text GLabel 6800 3825 2    50   Output ~ 0
+-12V_
+Wire Wire Line
+	6700 3825 6800 3825
+Text GLabel 6800 4575 2    50   Output ~ 0
++5V_
+Wire Wire Line
+	6700 4575 6800 4575
+Text GLabel 3775 2275 2    50   Output ~ 0
++12V_
+Wire Wire Line
+	3600 2275 3775 2275
+Text GLabel 6825 1325 1    50   Input ~ 0
++12V_
+Wire Wire Line
+	6825 1325 6825 1375
+Text GLabel 6825 2100 1    50   Input ~ 0
+-12V_
+Wire Wire Line
+	6825 2100 6825 2150
+Connection ~ 6825 2150
+Wire Wire Line
+	6700 2150 6825 2150
+Connection ~ 6825 1375
+Wire Wire Line
+	6700 1375 6825 1375
+Text GLabel 6825 2900 1    50   Input ~ 0
++5V_
+Wire Wire Line
+	6825 2900 6825 2950
+Connection ~ 6825 2950
+Wire Wire Line
+	6825 2950 6700 2950
+$Comp
+L Device:C C?
+U 1 1 5D83FED4
+P 5250 2325
+AR Path="/5CBB0B33/5D83FED4" Ref="C?"  Part="1" 
+AR Path="/5D83FED4" Ref="C109"  Part="1" 
+F 0 "C109" V 5100 2250 50  0000 L CNN
+F 1 "470n" V 5400 2250 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5288 2175 50  0001 C CNN
+F 3 "~" H 5250 2325 50  0001 C CNN
+	1    5250 2325
+	0    1    1    0   
+$EndComp
+$Comp
+L Isolator:SFH617A-2 U102
+U 1 1 5D867C9D
+P 3825 3025
+F 0 "U102" H 3825 3350 50  0000 C CNN
+F 1 "SFH617A-2" H 3825 3259 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 3625 2825 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 3825 3025 50  0001 L CNN
+	1    3825 3025
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D8868B9
+P 4275 2700
+AR Path="/5CBB0B33/5D8868B9" Ref="R?"  Part="1" 
+AR Path="/5D8868B9" Ref="R103"  Part="1" 
+F 0 "R103" H 4025 2775 50  0000 L CNN
+F 1 "470k" H 4025 2700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4205 2700 50  0001 C CNN
+F 3 "~" H 4275 2700 50  0001 C CNN
+	1    4275 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode_Bridge:B80C800DM D101
+U 1 1 5D88948A
+P 5025 2825
+F 0 "D101" V 5225 2625 50  0000 R CNN
+F 1 "B80C800DM" V 5150 2625 50  0000 R CNN
+F 2 "Diode_THT:Diode_Bridge_DIP-4_W7.62mm_P5.08mm" H 5175 2950 50  0001 L CNN
+F 3 "https://www.vishay.com/docs/88533/800dm.pdf" H 5025 2825 50  0001 C CNN
+	1    5025 2825
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4725 2825 4725 2325
+$Comp
+L Device:C C?
+U 1 1 5D8CF888
+P 4475 2825
+AR Path="/5CBB0B33/5D8CF888" Ref="C?"  Part="1" 
+AR Path="/5D8CF888" Ref="C105"  Part="1" 
+F 0 "C105" H 4500 2925 50  0000 L CNN
+F 1 "470n" H 4500 2725 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 4513 2675 50  0001 C CNN
+F 3 "~" H 4475 2825 50  0001 C CNN
+	1    4475 2825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4475 2675 4475 2525
+Wire Wire Line
+	4475 2525 5025 2525
+Wire Wire Line
+	4475 2975 4475 3125
+Wire Wire Line
+	4475 3125 5025 3125
+Wire Wire Line
+	4725 2325 5100 2325
+Wire Wire Line
+	3650 1700 5475 1700
+$Comp
+L Device:C C?
+U 1 1 5D902ABA
+P 5250 1950
+AR Path="/5CBB0B33/5D902ABA" Ref="C?"  Part="1" 
+AR Path="/5D902ABA" Ref="C108"  Part="1" 
+F 0 "C108" V 5100 1875 50  0000 L CNN
+F 1 "33n" V 5400 1875 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5288 1800 50  0001 C CNN
+F 3 "~" H 5250 1950 50  0001 C CNN
+	1    5250 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5100 1950 4725 1950
+Wire Wire Line
+	4725 1950 4725 2325
+Connection ~ 4725 2325
+Wire Wire Line
+	2575 2275 2575 2925
+Connection ~ 2575 2925
+Wire Wire Line
+	4275 2550 4275 2525
+Wire Wire Line
+	4275 2525 4475 2525
+Connection ~ 4475 2525
+Wire Wire Line
+	4275 2850 4275 2925
+Wire Wire Line
+	4275 2925 4125 2925
+Wire Wire Line
+	4125 3125 4475 3125
+Connection ~ 4475 3125
+$Comp
+L Device:R R?
+U 1 1 5D98C37C
+P 2775 2925
+AR Path="/5CBB0B33/5D98C37C" Ref="R?"  Part="1" 
+AR Path="/5D98C37C" Ref="R101"  Part="1" 
+F 0 "R101" V 2600 2825 50  0000 L CNN
+F 1 "22k" V 2675 2850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2705 2925 50  0001 C CNN
+F 3 "~" H 2775 2925 50  0001 C CNN
+	1    2775 2925
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2575 2925 2625 2925
+Wire Wire Line
+	2925 2925 2975 2925
+Wire Wire Line
+	2975 2925 2975 2375
+Wire Wire Line
+	2975 2375 3000 2375
+Wire Wire Line
+	2975 2925 3525 2925
+Connection ~ 2975 2925
+$Comp
+L power:Earth #PWR0112
+U 1 1 5D9DEA31
+P 3525 3125
+AR Path="/5D9DEA31" Ref="#PWR0112"  Part="1" 
+AR Path="/5C000D65/5D9DEA31" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D9DEA31" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0112" H 3525 2875 50  0001 C CNN
+F 1 "Earth" H 3525 2975 50  0001 C CNN
+F 2 "" H 3525 3125 50  0001 C CNN
+F 3 "" H 3525 3125 50  0001 C CNN
+	1    3525 3125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DA2786A
+P 3375 3725
+AR Path="/5CBB0B33/5DA2786A" Ref="R?"  Part="1" 
+AR Path="/5DA2786A" Ref="R102"  Part="1" 
+F 0 "R102" V 3200 3625 50  0000 L CNN
+F 1 "1k" V 3275 3650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3305 3725 50  0001 C CNN
+F 3 "~" H 3375 3725 50  0001 C CNN
+	1    3375 3725
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3225 3725 3175 3725
+Wire Wire Line
+	2775 3725 2575 3725
+Connection ~ 2575 3725
+Wire Wire Line
+	2575 3725 2575 4125
+Wire Wire Line
+	3525 3725 3775 3725
+Wire Wire Line
+	3775 3725 3775 4675
+Connection ~ 3775 3725
+Wire Wire Line
+	3775 3725 5900 3725
+Wire Wire Line
+	5475 1700 5475 2150
+Wire Wire Line
+	5400 1950 5675 1950
+Wire Wire Line
+	5400 2325 5475 2325
+Connection ~ 5475 2325
+Wire Wire Line
+	5475 2325 5475 2825
+Wire Wire Line
+	5675 1950 5675 2950
+Wire Wire Line
+	5325 2825 5475 2825
+Connection ~ 5475 2825
+Wire Wire Line
+	5475 2825 5475 3150
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J123
+U 1 1 5ED98581
+P 5400 8575
+F 0 "J123" H 5450 9092 50  0000 C CNN
+F 1 "AMP1" H 5450 9001 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 5400 8575 50  0001 C CNN
+F 3 "~" H 5400 8575 50  0001 C CNN
+	1    5400 8575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0179
+U 1 1 5EE0EB7E
+P 5700 8475
+AR Path="/5EE0EB7E" Ref="#PWR0179"  Part="1" 
+AR Path="/5C000D65/5EE0EB7E" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE0EB7E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0179" H 5700 8225 50  0001 C CNN
+F 1 "Earth" H 5700 8325 50  0001 C CNN
+F 2 "" H 5700 8475 50  0001 C CNN
+F 3 "" H 5700 8475 50  0001 C CNN
+	1    5700 8475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0183
+U 1 1 5EE71061
+P 5700 8875
+AR Path="/5EE71061" Ref="#PWR0183"  Part="1" 
+AR Path="/5C000D65/5EE71061" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71061" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0183" H 5700 8625 50  0001 C CNN
+F 1 "Earth" H 5700 8725 50  0001 C CNN
+F 2 "" H 5700 8875 50  0001 C CNN
+F 3 "" H 5700 8875 50  0001 C CNN
+	1    5700 8875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0182
+U 1 1 5EE712AE
+P 5700 8775
+AR Path="/5EE712AE" Ref="#PWR0182"  Part="1" 
+AR Path="/5C000D65/5EE712AE" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE712AE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0182" H 5700 8525 50  0001 C CNN
+F 1 "Earth" H 5700 8625 50  0001 C CNN
+F 2 "" H 5700 8775 50  0001 C CNN
+F 3 "" H 5700 8775 50  0001 C CNN
+	1    5700 8775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0181
+U 1 1 5EE71529
+P 5700 8675
+AR Path="/5EE71529" Ref="#PWR0181"  Part="1" 
+AR Path="/5C000D65/5EE71529" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71529" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0181" H 5700 8425 50  0001 C CNN
+F 1 "Earth" H 5700 8525 50  0001 C CNN
+F 2 "" H 5700 8675 50  0001 C CNN
+F 3 "" H 5700 8675 50  0001 C CNN
+	1    5700 8675
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0180
+U 1 1 5EE71930
+P 5700 8575
+AR Path="/5EE71930" Ref="#PWR0180"  Part="1" 
+AR Path="/5C000D65/5EE71930" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71930" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0180" H 5700 8325 50  0001 C CNN
+F 1 "Earth" H 5700 8425 50  0001 C CNN
+F 2 "" H 5700 8575 50  0001 C CNN
+F 3 "" H 5700 8575 50  0001 C CNN
+	1    5700 8575
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0190
+U 1 1 5EE71D27
+P 5700 10075
+AR Path="/5EE71D27" Ref="#PWR0190"  Part="1" 
+AR Path="/5C000D65/5EE71D27" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71D27" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0190" H 5700 9825 50  0001 C CNN
+F 1 "Earth" H 5700 9925 50  0001 C CNN
+F 2 "" H 5700 10075 50  0001 C CNN
+F 3 "" H 5700 10075 50  0001 C CNN
+	1    5700 10075
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J124
+U 1 1 5EE71D31
+P 5400 9675
+F 0 "J124" H 5450 10192 50  0000 C CNN
+F 1 "AMP2" H 5450 10101 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 5400 9675 50  0001 C CNN
+F 3 "~" H 5400 9675 50  0001 C CNN
+	1    5400 9675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0185
+U 1 1 5EE71D41
+P 5700 9575
+AR Path="/5EE71D41" Ref="#PWR0185"  Part="1" 
+AR Path="/5C000D65/5EE71D41" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71D41" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0185" H 5700 9325 50  0001 C CNN
+F 1 "Earth" H 5700 9425 50  0001 C CNN
+F 2 "" H 5700 9575 50  0001 C CNN
+F 3 "" H 5700 9575 50  0001 C CNN
+	1    5700 9575
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0189
+U 1 1 5EE71D4B
+P 5700 9975
+AR Path="/5EE71D4B" Ref="#PWR0189"  Part="1" 
+AR Path="/5C000D65/5EE71D4B" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71D4B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0189" H 5700 9725 50  0001 C CNN
+F 1 "Earth" H 5700 9825 50  0001 C CNN
+F 2 "" H 5700 9975 50  0001 C CNN
+F 3 "" H 5700 9975 50  0001 C CNN
+	1    5700 9975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0188
+U 1 1 5EE71D55
+P 5700 9875
+AR Path="/5EE71D55" Ref="#PWR0188"  Part="1" 
+AR Path="/5C000D65/5EE71D55" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71D55" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0188" H 5700 9625 50  0001 C CNN
+F 1 "Earth" H 5700 9725 50  0001 C CNN
+F 2 "" H 5700 9875 50  0001 C CNN
+F 3 "" H 5700 9875 50  0001 C CNN
+	1    5700 9875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0187
+U 1 1 5EE71D5F
+P 5700 9775
+AR Path="/5EE71D5F" Ref="#PWR0187"  Part="1" 
+AR Path="/5C000D65/5EE71D5F" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71D5F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0187" H 5700 9525 50  0001 C CNN
+F 1 "Earth" H 5700 9625 50  0001 C CNN
+F 2 "" H 5700 9775 50  0001 C CNN
+F 3 "" H 5700 9775 50  0001 C CNN
+	1    5700 9775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0186
+U 1 1 5EE71D69
+P 5700 9675
+AR Path="/5EE71D69" Ref="#PWR0186"  Part="1" 
+AR Path="/5C000D65/5EE71D69" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EE71D69" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0186" H 5700 9425 50  0001 C CNN
+F 1 "Earth" H 5700 9525 50  0001 C CNN
+F 2 "" H 5700 9675 50  0001 C CNN
+F 3 "" H 5700 9675 50  0001 C CNN
+	1    5700 9675
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 9375 5150 9375
+$Comp
+L Connector:Screw_Terminal_01x06 J?
+U 1 1 5E0B33F6
+P 2200 6750
+AR Path="/5CBB0B33/5E0B33F6" Ref="J?"  Part="1" 
+AR Path="/5E0B33F6" Ref="J110"  Part="1" 
+F 0 "J110" H 2200 7075 50  0000 C CNN
+F 1 "RELAY RF OUT" H 2550 6825 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-6-5.08_1x06_P5.08mm_Horizontal" H 2200 6750 50  0001 C CNN
+F 3 "~" H 2200 6750 50  0001 C CNN
+	1    2200 6750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0157
+U 1 1 5E0B3400
+P 2450 6550
+AR Path="/5E0B3400" Ref="#PWR0157"  Part="1" 
+AR Path="/5C000D65/5E0B3400" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E0B3400" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0157" H 2450 6300 50  0001 C CNN
+F 1 "Earth" H 2450 6400 50  0001 C CNN
+F 2 "" H 2450 6550 50  0001 C CNN
+F 3 "" H 2450 6550 50  0001 C CNN
+	1    2450 6550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2450 6550 2400 6550
+Wire Wire Line
+	2400 6850 2450 6850
+Wire Wire Line
+	2450 6950 2400 6950
+$Comp
+L power:Earth #PWR0160
+U 1 1 5E0B342C
+P 2450 7050
+AR Path="/5E0B342C" Ref="#PWR0160"  Part="1" 
+AR Path="/5C000D65/5E0B342C" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E0B342C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0160" H 2450 6800 50  0001 C CNN
+F 1 "Earth" H 2450 6900 50  0001 C CNN
+F 2 "" H 2450 7050 50  0001 C CNN
+F 3 "" H 2450 7050 50  0001 C CNN
+	1    2450 7050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2450 7050 2400 7050
+$Comp
+L power:-12V #PWR0158
+U 1 1 5E0B3437
+P 2450 6850
+F 0 "#PWR0158" H 2450 6950 50  0001 C CNN
+F 1 "-12V" V 2450 7000 50  0000 L CNN
+F 2 "" H 2450 6850 50  0001 C CNN
+F 3 "" H 2450 6850 50  0001 C CNN
+	1    2450 6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2575 6650 2400 6650
+$Comp
+L power:+12V #PWR?
+U 1 1 5E163563
+P 2450 6950
+AR Path="/5CBB0B33/5E163563" Ref="#PWR?"  Part="1" 
+AR Path="/5E163563" Ref="#PWR0159"  Part="1" 
+F 0 "#PWR0159" H 2450 6800 50  0001 C CNN
+F 1 "+12V" V 2450 7200 50  0000 C CNN
+F 2 "" H 2450 6950 50  0001 C CNN
+F 3 "" H 2450 6950 50  0001 C CNN
+	1    2450 6950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 6750 2575 6750
+$Comp
+L Connector:Screw_Terminal_01x06 J?
+U 1 1 5E18FD8F
+P 2200 7550
+AR Path="/5CBB0B33/5E18FD8F" Ref="J?"  Part="1" 
+AR Path="/5E18FD8F" Ref="J111"  Part="1" 
+F 0 "J111" H 2200 7875 50  0000 C CNN
+F 1 "RELAY RF IN" H 2550 7625 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-6-5.08_1x06_P5.08mm_Horizontal" H 2200 7550 50  0001 C CNN
+F 3 "~" H 2200 7550 50  0001 C CNN
+	1    2200 7550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0161
+U 1 1 5E18FD99
+P 2450 7350
+AR Path="/5E18FD99" Ref="#PWR0161"  Part="1" 
+AR Path="/5C000D65/5E18FD99" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E18FD99" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0161" H 2450 7100 50  0001 C CNN
+F 1 "Earth" H 2450 7200 50  0001 C CNN
+F 2 "" H 2450 7350 50  0001 C CNN
+F 3 "" H 2450 7350 50  0001 C CNN
+	1    2450 7350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2450 7350 2400 7350
+Wire Wire Line
+	2400 7650 2450 7650
+Wire Wire Line
+	2450 7750 2400 7750
+$Comp
+L power:Earth #PWR0164
+U 1 1 5E18FDA6
+P 2450 7850
+AR Path="/5E18FDA6" Ref="#PWR0164"  Part="1" 
+AR Path="/5C000D65/5E18FDA6" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E18FDA6" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0164" H 2450 7600 50  0001 C CNN
+F 1 "Earth" H 2450 7700 50  0001 C CNN
+F 2 "" H 2450 7850 50  0001 C CNN
+F 3 "" H 2450 7850 50  0001 C CNN
+	1    2450 7850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2450 7850 2400 7850
+$Comp
+L power:-12V #PWR0162
+U 1 1 5E18FDB1
+P 2450 7650
+F 0 "#PWR0162" H 2450 7750 50  0001 C CNN
+F 1 "-12V" V 2450 7800 50  0000 L CNN
+F 2 "" H 2450 7650 50  0001 C CNN
+F 3 "" H 2450 7650 50  0001 C CNN
+	1    2450 7650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2575 7450 2400 7450
+$Comp
+L power:+12V #PWR?
+U 1 1 5E18FDBC
+P 2450 7750
+AR Path="/5CBB0B33/5E18FDBC" Ref="#PWR?"  Part="1" 
+AR Path="/5E18FDBC" Ref="#PWR0163"  Part="1" 
+F 0 "#PWR0163" H 2450 7600 50  0001 C CNN
+F 1 "+12V" V 2450 8000 50  0000 C CNN
+F 2 "" H 2450 7750 50  0001 C CNN
+F 3 "" H 2450 7750 50  0001 C CNN
+	1    2450 7750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 7550 2575 7550
+$Comp
+L power:Earth #PWR0166
+U 1 1 5E51B4C6
+P 4900 7350
+AR Path="/5E51B4C6" Ref="#PWR0166"  Part="1" 
+AR Path="/5C000D65/5E51B4C6" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E51B4C6" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0166" H 4900 7100 50  0001 C CNN
+F 1 "Earth" H 4900 7200 50  0001 C CNN
+F 2 "" H 4900 7350 50  0001 C CNN
+F 3 "" H 4900 7350 50  0001 C CNN
+	1    4900 7350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J117
+U 1 1 5E51B4D0
+P 4900 7150
+F 0 "J117" H 5050 7250 50  0000 C CNN
+F 1 "ALC" H 5075 7150 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 4900 7150 50  0001 C CNN
+F 3 " ~" H 4900 7150 50  0001 C CNN
+	1    4900 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 7150 4625 7150
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J104
+U 1 1 5DE4071B
+P 8100 6550
+AR Path="/5DE4071B" Ref="J104"  Part="1" 
+AR Path="/5CBD59C6/5DE4071B" Ref="J?"  Part="1" 
+F 0 "J104" H 8150 7067 50  0000 C CNN
+F 1 "Front Panel" H 8150 6976 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 8100 6550 50  0001 C CNN
+F 3 "~" H 8100 6550 50  0001 C CNN
+	1    8100 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DE40721
+P 7900 6250
+AR Path="/5CBD59C6/5DE40721" Ref="#PWR?"  Part="1" 
+AR Path="/5DE40721" Ref="#PWR0140"  Part="1" 
+F 0 "#PWR0140" H 7900 6100 50  0001 C CNN
+F 1 "+5V" V 7900 6450 50  0000 C CNN
+F 2 "" H 7900 6250 50  0001 C CNN
+F 3 "" H 7900 6250 50  0001 C CNN
+	1    7900 6250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0143
+U 1 1 5DE40727
+P 8400 6250
+AR Path="/5DE40727" Ref="#PWR0143"  Part="1" 
+AR Path="/5E11E288/5DE40727" Ref="#PWR?"  Part="1" 
+AR Path="/5CBD59C6/5DE40727" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0143" H 8400 6000 50  0001 C CNN
+F 1 "Earth" H 8400 6100 50  0001 C CNN
+F 2 "" H 8400 6250 50  0001 C CNN
+F 3 "" H 8400 6250 50  0001 C CNN
+	1    8400 6250
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8500 6450 2    50   Input ~ 0
+FWD4_MON
+Text GLabel 7800 6550 0    50   Input ~ 0
+REF4_MON
+Text GLabel 7800 6350 0    50   Input ~ 0
+IDD_MON
+Wire Wire Line
+	8500 6450 8400 6450
+Wire Wire Line
+	7800 6550 7900 6550
+Text GLabel 8500 6350 2    50   Input ~ 0
+VDD_MON
+Wire Wire Line
+	7800 6350 7900 6350
+Wire Wire Line
+	8400 6350 8500 6350
+Text GLabel 7800 6650 0    50   Input ~ 0
+TEMP2_MON
+Wire Wire Line
+	7800 6650 7900 6650
+Text GLabel 8500 6550 2    50   Input ~ 0
+TEMP1_MON
+Wire Wire Line
+	8400 6550 8500 6550
+Text GLabel 7800 6850 0    50   Input ~ 0
+ON_AIR
+Wire Wire Line
+	7800 6850 7900 6850
+Text GLabel 8500 6650 2    50   Input ~ 0
+FAULT
+Wire Wire Line
+	8400 6650 8500 6650
+Text GLabel 7800 6950 0    50   Output ~ 0
+STBY
+Wire Wire Line
+	7800 6950 7900 6950
+Text GLabel 8500 6950 2    50   Output ~ 0
+OP
+Wire Wire Line
+	8400 6950 8500 6950
+Text GLabel 7800 6750 0    50   Input ~ 0
+RF_READY
+Wire Wire Line
+	7800 6750 7900 6750
+Text GLabel 8500 6750 2    50   Output ~ 0
+RESET_CMD
+Wire Wire Line
+	8400 6750 8500 6750
+Text GLabel 7800 6450 0    50   Input ~ 0
+ALC_MON
+Wire Wire Line
+	7900 6450 7800 6450
+$Comp
+L power:Earth #PWR0144
+U 1 1 5E1EFE19
+P 8400 6850
+AR Path="/5E1EFE19" Ref="#PWR0144"  Part="1" 
+AR Path="/5E11E288/5E1EFE19" Ref="#PWR?"  Part="1" 
+AR Path="/5CBD59C6/5E1EFE19" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0144" H 8400 6600 50  0001 C CNN
+F 1 "Earth" H 8400 6700 50  0001 C CNN
+F 2 "" H 8400 6850 50  0001 C CNN
+F 3 "" H 8400 6850 50  0001 C CNN
+	1    8400 6850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0165
+U 1 1 5F74C5FD
+P 4900 6925
+AR Path="/5F74C5FD" Ref="#PWR0165"  Part="1" 
+AR Path="/5C000D65/5F74C5FD" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5F74C5FD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0165" H 4900 6675 50  0001 C CNN
+F 1 "Earth" H 4900 6775 50  0001 C CNN
+F 2 "" H 4900 6925 50  0001 C CNN
+F 3 "" H 4900 6925 50  0001 C CNN
+	1    4900 6925
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J116
+U 1 1 5F74C607
+P 4900 6725
+F 0 "J116" H 5050 6825 50  0000 C CNN
+F 1 "PTT" H 5075 6725 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 4900 6725 50  0001 C CNN
+F 3 " ~" H 4900 6725 50  0001 C CNN
+	1    4900 6725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 6725 4625 6725
+$Comp
+L Transistor_BJT:DTA124E Q?
+U 1 1 6483A1B0
+P 2975 3625
+AR Path="/5E11E288/6483A1B0" Ref="Q?"  Part="1" 
+AR Path="/6483A1B0" Ref="Q101"  Part="1" 
+F 0 "Q101" V 3208 3625 50  0000 C CNN
+F 1 "DTA124E" V 3299 3625 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2975 3625 50  0001 L CNN
+F 3 "" H 2975 3625 50  0001 L CNN
+	1    2975 3625
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2975 2925 2975 3375
+$Comp
+L Regulator_Linear:L78L33_SOT89 U?
+U 1 1 5DD7CCAF
+P 8950 2950
+AR Path="/5CBD59C6/5DD7CCAF" Ref="U?"  Part="1" 
+AR Path="/5DD7CCAF" Ref="U103"  Part="1" 
+F 0 "U103" H 8950 3192 50  0000 C CNN
+F 1 "L78L33_SOT89" H 8950 3101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 8950 3150 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 8950 2900 50  0001 C CNN
+	1    8950 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 2950 8650 2950
+$Comp
+L power:Earth #PWR0139
+U 1 1 5DDA983C
+P 8950 3250
+AR Path="/5DDA983C" Ref="#PWR0139"  Part="1" 
+AR Path="/5C000D65/5DDA983C" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5DDA983C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0139" H 8950 3000 50  0001 C CNN
+F 1 "Earth" H 8950 3100 50  0001 C CNN
+F 2 "" H 8950 3250 50  0001 C CNN
+F 3 "" H 8950 3250 50  0001 C CNN
+	1    8950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DDAF19C
+P 9425 3150
+AR Path="/5CBB0B33/5DDAF19C" Ref="C?"  Part="1" 
+AR Path="/5DDAF19C" Ref="C123"  Part="1" 
+F 0 "C123" H 9475 3250 50  0000 L CNN
+F 1 "100n" H 9500 3075 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9463 3000 50  0001 C CNN
+F 3 "~" H 9425 3150 50  0001 C CNN
+	1    9425 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0142
+U 1 1 5DDAF1A6
+P 9425 3300
+AR Path="/5DDAF1A6" Ref="#PWR0142"  Part="1" 
+AR Path="/5C000D65/5DDAF1A6" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5DDAF1A6" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0142" H 9425 3050 50  0001 C CNN
+F 1 "Earth" H 9425 3150 50  0001 C CNN
+F 2 "" H 9425 3300 50  0001 C CNN
+F 3 "" H 9425 3300 50  0001 C CNN
+	1    9425 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9425 2950 9425 3000
+Wire Wire Line
+	9250 2950 9425 2950
+$Comp
+L power:+3V3 #PWR0141
+U 1 1 5DDDA161
+P 9425 2900
+F 0 "#PWR0141" H 9425 2750 50  0001 C CNN
+F 1 "+3V3" H 9440 3073 50  0000 C CNN
+F 2 "" H 9425 2900 50  0001 C CNN
+F 3 "" H 9425 2900 50  0001 C CNN
+	1    9425 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9425 2900 9425 2950
+Connection ~ 9425 2950
+$Comp
+L Connector_Generic:Conn_01x08 J?
+U 1 1 5DDF084A
+P 9875 8250
+AR Path="/5CBD59C6/5DDF084A" Ref="J?"  Part="1" 
+AR Path="/5DDF084A" Ref="J120"  Part="1" 
+F 0 "J120" H 9955 8242 50  0000 L CNN
+F 1 "SPI0" H 9955 8151 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 9875 8250 50  0001 C CNN
+F 3 "~" H 9875 8250 50  0001 C CNN
+	1    9875 8250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9375 8050 9675 8050
+Wire Wire Line
+	9375 8150 9675 8150
+Wire Wire Line
+	9375 8250 9675 8250
+Wire Wire Line
+	9375 8350 9675 8350
+Wire Wire Line
+	9375 8450 9675 8450
+$Comp
+L power:Earth #PWR0167
+U 1 1 5DEDE1F2
+P 9675 7950
+AR Path="/5DEDE1F2" Ref="#PWR0167"  Part="1" 
+AR Path="/5C000D65/5DEDE1F2" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5DEDE1F2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0167" H 9675 7700 50  0001 C CNN
+F 1 "Earth" H 9675 7800 50  0001 C CNN
+F 2 "" H 9675 7950 50  0001 C CNN
+F 3 "" H 9675 7950 50  0001 C CNN
+	1    9675 7950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 8225 5150 8275
+Wire Wire Line
+	5150 9325 5150 9375
+Text GLabel 5125 9675 0    50   Input ~ 0
+GATE_EN
+Text GLabel 5125 8575 0    50   Input ~ 0
+GATE_EN
+Wire Wire Line
+	5125 8575 5200 8575
+$Comp
+L power:Earth #PWR0177
+U 1 1 5E05292F
+P 5200 8475
+AR Path="/5E05292F" Ref="#PWR0177"  Part="1" 
+AR Path="/5C000D65/5E05292F" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E05292F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0177" H 5200 8225 50  0001 C CNN
+F 1 "Earth" H 5200 8325 50  0001 C CNN
+F 2 "" H 5200 8475 50  0001 C CNN
+F 3 "" H 5200 8475 50  0001 C CNN
+	1    5200 8475
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5125 9675 5200 9675
+Wire Wire Line
+	5150 9375 5150 9475
+Wire Wire Line
+	5150 9475 5200 9475
+Connection ~ 5150 9375
+Wire Wire Line
+	5150 8275 5150 8375
+Wire Wire Line
+	5150 8375 5200 8375
+Connection ~ 5150 8275
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 5E3EF1D4
+P 9875 9750
+AR Path="/5CBD59C6/5E3EF1D4" Ref="J?"  Part="1" 
+AR Path="/5E3EF1D4" Ref="J122"  Part="1" 
+F 0 "J122" H 9955 9742 50  0000 L CNN
+F 1 "RS232" H 9955 9651 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 9875 9750 50  0001 C CNN
+F 3 "~" H 9875 9750 50  0001 C CNN
+	1    9875 9750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0174
+U 1 1 5E3EF1DA
+P 9675 10050
+AR Path="/5E3EF1DA" Ref="#PWR0174"  Part="1" 
+AR Path="/5E11E288/5E3EF1DA" Ref="#PWR?"  Part="1" 
+AR Path="/5CBD59C6/5E3EF1DA" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0174" H 9675 9800 50  0001 C CNN
+F 1 "Earth" H 9675 9900 50  0001 C CNN
+F 2 "" H 9675 10050 50  0001 C CNN
+F 3 "" H 9675 10050 50  0001 C CNN
+	1    9675 10050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0173
+U 1 1 5E3EF1E0
+P 9675 9750
+AR Path="/5E3EF1E0" Ref="#PWR0173"  Part="1" 
+AR Path="/5E11E288/5E3EF1E0" Ref="#PWR?"  Part="1" 
+AR Path="/5CBD59C6/5E3EF1E0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0173" H 9675 9500 50  0001 C CNN
+F 1 "Earth" H 9675 9600 50  0001 C CNN
+F 2 "" H 9675 9750 50  0001 C CNN
+F 3 "" H 9675 9750 50  0001 C CNN
+	1    9675 9750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9375 9550 9675 9550
+Wire Wire Line
+	9375 9650 9675 9650
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 5E51EC81
+P 9875 9050
+AR Path="/5CBD59C6/5E51EC81" Ref="J?"  Part="1" 
+AR Path="/5E51EC81" Ref="J121"  Part="1" 
+F 0 "J121" H 9955 9042 50  0000 L CNN
+F 1 "I2C1" H 9955 8951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 9875 9050 50  0001 C CNN
+F 3 "~" H 9875 9050 50  0001 C CNN
+	1    9875 9050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E5298F2
+P 9675 8550
+AR Path="/5CBD59C6/5E5298F2" Ref="#PWR?"  Part="1" 
+AR Path="/5E5298F2" Ref="#PWR0168"  Part="1" 
+F 0 "#PWR0168" H 9675 8400 50  0001 C CNN
+F 1 "+3V3" V 9675 8750 50  0000 C CNN
+F 2 "" H 9675 8550 50  0001 C CNN
+F 3 "" H 9675 8550 50  0001 C CNN
+	1    9675 8550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E59F592
+P 9675 9250
+AR Path="/5CBD59C6/5E59F592" Ref="#PWR?"  Part="1" 
+AR Path="/5E59F592" Ref="#PWR0171"  Part="1" 
+F 0 "#PWR0171" H 9675 9100 50  0001 C CNN
+F 1 "+3V3" V 9675 9450 50  0000 C CNN
+F 2 "" H 9675 9250 50  0001 C CNN
+F 3 "" H 9675 9250 50  0001 C CNN
+	1    9675 9250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0170
+U 1 1 5E59F87F
+P 9675 8850
+AR Path="/5E59F87F" Ref="#PWR0170"  Part="1" 
+AR Path="/5C000D65/5E59F87F" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E59F87F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0170" H 9675 8600 50  0001 C CNN
+F 1 "Earth" H 9675 8700 50  0001 C CNN
+F 2 "" H 9675 8850 50  0001 C CNN
+F 3 "" H 9675 8850 50  0001 C CNN
+	1    9675 8850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0169
+U 1 1 5E5B1AC5
+P 9675 8650
+F 0 "#PWR0169" H 9675 8500 50  0001 C CNN
+F 1 "+5V" V 9690 8778 50  0000 L CNN
+F 2 "" H 9675 8650 50  0001 C CNN
+F 3 "" H 9675 8650 50  0001 C CNN
+	1    9675 8650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0172
+U 1 1 5E5BA988
+P 9675 9350
+F 0 "#PWR0172" H 9675 9200 50  0001 C CNN
+F 1 "+5V" V 9690 9478 50  0000 L CNN
+F 2 "" H 9675 9350 50  0001 C CNN
+F 3 "" H 9675 9350 50  0001 C CNN
+	1    9675 9350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9375 8950 9675 8950
+Wire Wire Line
+	9375 9050 9675 9050
+Wire Wire Line
+	4625 9775 5200 9775
+Wire Wire Line
+	4625 9875 5200 9875
+Wire Wire Line
+	4625 9975 5200 9975
+Wire Wire Line
+	4625 10075 5200 10075
+$Comp
+L power:-12V #PWR0191
+U 1 1 5E73F1B6
+P 5750 8225
+F 0 "#PWR0191" H 5750 8325 50  0001 C CNN
+F 1 "-12V" H 5765 8398 50  0000 C CNN
+F 2 "" H 5750 8225 50  0001 C CNN
+F 3 "" H 5750 8225 50  0001 C CNN
+	1    5750 8225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 8275 5750 8275
+Wire Wire Line
+	5750 8275 5750 8225
+Wire Wire Line
+	5700 8375 5750 8375
+Wire Wire Line
+	5750 8375 5750 8275
+Connection ~ 5750 8275
+$Comp
+L power:-12V #PWR0192
+U 1 1 5E76DF1E
+P 5750 9325
+F 0 "#PWR0192" H 5750 9425 50  0001 C CNN
+F 1 "-12V" H 5765 9498 50  0000 C CNN
+F 2 "" H 5750 9325 50  0001 C CNN
+F 3 "" H 5750 9325 50  0001 C CNN
+	1    5750 9325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 9375 5750 9375
+Wire Wire Line
+	5750 9375 5750 9325
+Wire Wire Line
+	5700 9475 5750 9475
+Wire Wire Line
+	5750 9475 5750 9375
+Connection ~ 5750 9375
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 5E7A6563
+P 6825 8150
+AR Path="/5CBD59C6/5E7A6563" Ref="J?"  Part="1" 
+AR Path="/5E7A6563" Ref="J105"  Part="1" 
+F 0 "J105" H 7050 8200 50  0000 L CNN
+F 1 "ANT_SWITCH" H 6905 8051 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6825 8150 50  0001 C CNN
+F 3 "~" H 6825 8150 50  0001 C CNN
+	1    6825 8150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7325 7950 7025 7950
+Wire Wire Line
+	7325 8050 7025 8050
+Wire Wire Line
+	7325 8150 7025 8150
+$Comp
+L power:Earth #PWR0145
+U 1 1 5E7EBC1A
+P 7025 8250
+AR Path="/5E7EBC1A" Ref="#PWR0145"  Part="1" 
+AR Path="/5C000D65/5E7EBC1A" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E7EBC1A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0145" H 7025 8000 50  0001 C CNN
+F 1 "Earth" H 7025 8100 50  0001 C CNN
+F 2 "" H 7025 8250 50  0001 C CNN
+F 3 "" H 7025 8250 50  0001 C CNN
+	1    7025 8250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E7F6BAB
+P 7025 8350
+AR Path="/5CBD59C6/5E7F6BAB" Ref="#PWR?"  Part="1" 
+AR Path="/5E7F6BAB" Ref="#PWR0146"  Part="1" 
+F 0 "#PWR0146" H 7025 8200 50  0001 C CNN
+F 1 "+3V3" V 7025 8550 50  0000 C CNN
+F 2 "" H 7025 8350 50  0001 C CNN
+F 3 "" H 7025 8350 50  0001 C CNN
+	1    7025 8350
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0147
+U 1 1 5E7F6BB5
+P 7025 8450
+F 0 "#PWR0147" H 7025 8300 50  0001 C CNN
+F 1 "+5V" V 7040 8578 50  0000 L CNN
+F 2 "" H 7025 8450 50  0001 C CNN
+F 3 "" H 7025 8450 50  0001 C CNN
+	1    7025 8450
+	0    1    -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 J?
+U 1 1 5E890771
+P 6825 8975
+AR Path="/5CBD59C6/5E890771" Ref="J?"  Part="1" 
+AR Path="/5E890771" Ref="J106"  Part="1" 
+F 0 "J106" H 7075 9075 50  0000 C CNN
+F 1 "BAND_SELECT" H 7150 8950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 6825 8975 50  0001 C CNN
+F 3 "~" H 6825 8975 50  0001 C CNN
+	1    6825 8975
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7325 8675 7025 8675
+Wire Wire Line
+	7325 8775 7025 8775
+Wire Wire Line
+	7325 8875 7025 8875
+Wire Wire Line
+	7325 8975 7025 8975
+Wire Wire Line
+	7325 9075 7025 9075
+Wire Wire Line
+	7325 9175 7025 9175
+$Comp
+L power:Earth #PWR0148
+U 1 1 5E9017AD
+P 7025 9275
+AR Path="/5E9017AD" Ref="#PWR0148"  Part="1" 
+AR Path="/5C000D65/5E9017AD" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5E9017AD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0148" H 7025 9025 50  0001 C CNN
+F 1 "Earth" H 7025 9125 50  0001 C CNN
+F 2 "" H 7025 9275 50  0001 C CNN
+F 3 "" H 7025 9275 50  0001 C CNN
+	1    7025 9275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E9026F2
+P 7025 9375
+AR Path="/5CBD59C6/5E9026F2" Ref="#PWR?"  Part="1" 
+AR Path="/5E9026F2" Ref="#PWR0149"  Part="1" 
+F 0 "#PWR0149" H 7025 9225 50  0001 C CNN
+F 1 "+3V3" V 7025 9575 50  0000 C CNN
+F 2 "" H 7025 9375 50  0001 C CNN
+F 3 "" H 7025 9375 50  0001 C CNN
+	1    7025 9375
+	0    1    -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 5EAA6D52
+P 6825 9800
+AR Path="/5CBD59C6/5EAA6D52" Ref="J?"  Part="1" 
+AR Path="/5EAA6D52" Ref="J107"  Part="1" 
+F 0 "J107" H 6905 9792 50  0000 L CNN
+F 1 "I2C0" H 6905 9701 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6825 9800 50  0001 C CNN
+F 3 "~" H 6825 9800 50  0001 C CNN
+	1    6825 9800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EAA6D5C
+P 7025 10000
+AR Path="/5CBD59C6/5EAA6D5C" Ref="#PWR?"  Part="1" 
+AR Path="/5EAA6D5C" Ref="#PWR0151"  Part="1" 
+F 0 "#PWR0151" H 7025 9850 50  0001 C CNN
+F 1 "+3V3" V 7025 10200 50  0000 C CNN
+F 2 "" H 7025 10000 50  0001 C CNN
+F 3 "" H 7025 10000 50  0001 C CNN
+	1    7025 10000
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0150
+U 1 1 5EAA6D66
+P 7025 9600
+AR Path="/5EAA6D66" Ref="#PWR0150"  Part="1" 
+AR Path="/5C000D65/5EAA6D66" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5EAA6D66" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0150" H 7025 9350 50  0001 C CNN
+F 1 "Earth" H 7025 9450 50  0001 C CNN
+F 2 "" H 7025 9600 50  0001 C CNN
+F 3 "" H 7025 9600 50  0001 C CNN
+	1    7025 9600
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0152
+U 1 1 5EAA6D70
+P 7025 10100
+F 0 "#PWR0152" H 7025 9950 50  0001 C CNN
+F 1 "+5V" V 7040 10228 50  0000 L CNN
+F 2 "" H 7025 10100 50  0001 C CNN
+F 3 "" H 7025 10100 50  0001 C CNN
+	1    7025 10100
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	7325 9700 7025 9700
+Wire Wire Line
+	7325 9800 7025 9800
+Wire Wire Line
+	7025 9900 7325 9900
+Wire Wire Line
+	9675 9150 9375 9150
+$Comp
+L Converter_DCDC:ITQ2405SA PS105
+U 1 1 5F5BBADC
+P 6300 4675
+F 0 "PS105" H 6300 5056 50  0000 C CNN
+F 1 "ITQ2405SA" H 6300 4965 50  0000 C CNN
+F 2 "my-library-footprints:Converter_DCDC_XP_POWER-ITXxxxxSA_THT" H 5250 4425 50  0001 L CNN
+F 3 "https://www.xppower.com/pdfs/SF_ITQ.pdf" H 7350 4375 50  0001 L CNN
+	1    6300 4675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1350 2500 1350
+$Comp
+L power:Earth #PWR0101
+U 1 1 5D99E53D
+P 2075 1450
+AR Path="/5D99E53D" Ref="#PWR0101"  Part="1" 
+AR Path="/5C000D65/5D99E53D" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5D99E53D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0101" H 2075 1200 50  0001 C CNN
+F 1 "Earth" H 2075 1300 50  0001 C CNN
+F 2 "" H 2075 1450 50  0001 C CNN
+F 3 "" H 2075 1450 50  0001 C CNN
+	1    2075 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0102
+U 1 1 5F6B8963
+P 2075 1750
+AR Path="/5F6B8963" Ref="#PWR0102"  Part="1" 
+AR Path="/5C000D65/5F6B8963" Ref="#PWR?"  Part="1" 
+AR Path="/5CBB0B33/5F6B8963" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0102" H 2075 1500 50  0001 C CNN
+F 1 "Earth" H 2075 1600 50  0001 C CNN
+F 2 "" H 2075 1750 50  0001 C CNN
+F 3 "" H 2075 1750 50  0001 C CNN
+	1    2075 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 1350 2500 1650
+Wire Wire Line
+	2500 1650 2075 1650
+Wire Wire Line
+	2450 1250 2625 1250
+Connection ~ 2925 1250
+Wire Wire Line
+	2075 1550 2625 1550
+Wire Wire Line
+	2625 1550 2625 1250
+Connection ~ 2625 1250
+Wire Wire Line
+	2625 1250 2925 1250
+Wire Wire Line
+	2500 1650 2500 1700
+Wire Wire Line
+	2500 1700 2925 1700
+Connection ~ 2500 1650
+Connection ~ 2925 1700
+Wire Wire Line
+	4625 6025 4800 6025
+Wire Wire Line
+	4625 6300 4800 6300
+Wire Wire Line
+	3775 4675 5900 4675
+Wire Wire Line
+	9675 9850 9375 9850
+Wire Wire Line
+	9375 9950 9675 9950
+Wire Notes Line
+	1275 875  1275 5025
+Wire Notes Line
+	1275 5025 9875 5025
+Wire Notes Line
+	9875 5025 9875 875 
+Wire Notes Line
+	9875 875  1275 875 
+$EndSCHEMATC
