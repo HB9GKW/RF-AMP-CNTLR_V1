@@ -3,27 +3,31 @@ HB9GKW RF Amplifier Controller
 
 Features:
 
-* save sequencing of: 
-	- input and output relays via handshake and adjustable delays
-	- amplifier gate enable
+* Save sequencing of: 
+	- Input and output relays with handshake and adjustable delays
+	- Amplifier gate enable
 	- ALC blanking voltage
 
-* control of up to 2 power amplifier modules
+* Control of up to 2 power amplifier modules
 
-* fast analog protection:
+* Fast analog interlocking:
 	- 4x VSWR
-	- 2x Temperature
-	- Overcurrent
 	- 2x RF input overload
+	- Overcurrent
+	- 2x Temperature
 
-* digital monitoring interface compatible for Raspberry Pi:
-	- amplifier operation and fault states
-	- 12 ADC channels (voltage, current, 4x forward/reflected, 2x temperature)
+* High power MOSFET high side switch with voltage/current sense to disable amplifiers drain supply
 
-* on-board power supplies (12V, -12V, 5V, 3.3V)
+* Adjustable ALC output and PTT input
 
-* can be powered either by mains or external 13.8V supply
+* Digital monitoring interface compatible for Raspberry Pi (40 pin header):
+	- Amplifier operation and fault states
+	- 12 ADC channels (12bit) for voltage, current, 4x forward/reflected, 2x temperature reading
 
-* enhanced RF relay switching speed compatible for 12V and 24V RF relays
+* On-board power supplies (12V, -12V, 5V, 3.3V)
 
-* digital interface allows CAT control, band & antenna switching  
+* Can be powered either by mains or external 13.8V supply
+
+* Enhanced RF relay switching speed circuitry compatible for 12V and 24V RF relays
+
+* Digital interface allows radio CAT control, band and antenna switching  
