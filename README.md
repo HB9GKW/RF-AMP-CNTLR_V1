@@ -18,7 +18,7 @@ Features:
 
 * High power MOSFET high side switch with voltage/current sense to disable amplifiers drain supply
 
-* Adjustable ALC output and PTT input
+* PTT input and adjustable ALC output
 
 * Digital monitoring interface compatible for Raspberry Pi (40 pin header):
 	- Amplifier operation and fault states
@@ -30,4 +30,4 @@ Features:
 
 * Enhanced RF relay switching speed circuitry compatible for 12V and 24V RF relays
 
-* Digital interface allows radio CAT control, band and antenna switching  
+* Radio CAT control, Band and Antenna switching and general purpose interfacing ports for I2C and SPI 
