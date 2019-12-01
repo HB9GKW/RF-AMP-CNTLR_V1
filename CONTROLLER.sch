@@ -6,7 +6,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 4
 Title "RF Amplifier Controller"
-Date "2019-11-23"
+Date "2019-12-01"
 Rev "1"
 Comp "HB9GKW"
 Comment1 ""
@@ -25,7 +25,7 @@ ILK_HSWR4
 Text GLabel 3925 7375 0    50   Input ~ 0
 ILK_RF_OL
 Text GLabel 10075 5425 2    50   Output ~ 0
-RESET_CMD
+RESET_CMD_PI
 Text GLabel 3925 7475 0    50   Input ~ 0
 ILK_IDD_OC
 Text GLabel 3925 7575 0    50   Input ~ 0
@@ -198,8 +198,6 @@ Wire Wire Line
 Wire Wire Line
 	4925 3675 5050 3675
 Connection ~ 4925 3675
-Wire Wire Line
-	4925 3675 4925 3300
 $Comp
 L power:Earth #PWR?
 U 1 1 5E62873F
@@ -943,11 +941,11 @@ Wire Wire Line
 Wire Wire Line
 	9225 7050 9325 7050
 Text GLabel 10075 5325 2    50   Output ~ 0
-OP
+OP_CMD_PI
 Wire Wire Line
 	10075 5325 9925 5325
 Text GLabel 10075 5525 2    50   Output ~ 0
-ILK_CMD
+ILK_CMD_PI
 Wire Wire Line
 	10075 5525 9925 5525
 Wire Wire Line
@@ -965,12 +963,12 @@ P 5200 3300
 AR Path="/5CBB0B33/5DD09976" Ref="C?"  Part="1" 
 AR Path="/5DD09976" Ref="C?"  Part="1" 
 AR Path="/5CBD59C6/5DD09976" Ref="C202"  Part="1" 
-F 0 "C202" V 4975 3250 50  0000 L CNN
-F 1 "10u" V 5050 3200 50  0000 L CNN
+F 0 "C202" V 5425 3200 50  0000 L CNN
+F 1 "10u" V 5350 3225 50  0000 L CNN
 F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 5238 3150 50  0001 C CNN
 F 3 "~" H 5200 3300 50  0001 C CNN
 	1    5200 3300
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
 $Comp
 L power:Earth #PWR?
@@ -987,11 +985,6 @@ F 3 "" H 5350 3300 50  0001 C CNN
 	1    5350 3300
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5050 3300 4925 3300
-Connection ~ 4925 3300
-Wire Wire Line
-	4925 3300 4925 3175
 Wire Notes Line
 	7925 8050 7925 9825
 Wire Notes Line
@@ -1077,4 +1070,11 @@ INT_OC
 Wire Wire Line
 	9025 7025 9025 7075
 NoConn ~ 8925 7025
+Wire Wire Line
+	4925 3175 4925 3300
+Wire Wire Line
+	5050 3300 4925 3300
+Connection ~ 4925 3300
+Wire Wire Line
+	4925 3300 4925 3675
 $EndSCHEMATC

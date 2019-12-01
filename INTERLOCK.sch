@@ -6,7 +6,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 4
 Title "RF Amplifier Controller"
-Date "2019-11-23"
+Date "2019-12-01"
 Rev "1"
 Comp "HB9GKW"
 Comment1 ""
@@ -777,7 +777,7 @@ Connection ~ 14175 7925
 Wire Wire Line
 	14175 8300 14175 7925
 Text GLabel 13775 8500 0    50   Input ~ 0
-ILK_CMD
+ILK_CMD_PI
 Wire Wire Line
 	13775 8500 13825 8500
 Wire Wire Line

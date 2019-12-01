@@ -6,7 +6,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 4
 Title "RF Amplifier Controller"
-Date "2019-11-23"
+Date "2019-12-01"
 Rev "1"
 Comp "HB9GKW"
 Comment1 ""
@@ -901,8 +901,6 @@ F 3 "http://www.meanwell.com/Upload/PDF/IRM-20/IRM-20-SPEC.PDF" H 6700 2700 50  
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5475 2150 5475 2325
-Wire Wire Line
 	5475 3150 5900 3150
 Connection ~ 5475 2150
 Wire Wire Line
@@ -1471,76 +1469,51 @@ Wire Wire Line
 $Comp
 L Device:C C?
 U 1 1 5D83FED4
-P 5250 2325
+P 5250 2825
 AR Path="/5CBB0B33/5D83FED4" Ref="C?"  Part="1" 
 AR Path="/5D83FED4" Ref="C109"  Part="1" 
-F 0 "C109" V 5100 2250 50  0000 L CNN
-F 1 "470n" V 5400 2250 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5288 2175 50  0001 C CNN
-F 3 "~" H 5250 2325 50  0001 C CNN
-	1    5250 2325
+F 0 "C109" V 5100 2750 50  0000 L CNN
+F 1 "470n" V 5400 2750 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5288 2675 50  0001 C CNN
+F 3 "~" H 5250 2825 50  0001 C CNN
+	1    5250 2825
 	0    1    1    0   
 $EndComp
 $Comp
 L Isolator:SFH617A-2 U102
 U 1 1 5D867C9D
-P 3825 3025
-F 0 "U102" H 3825 3350 50  0000 C CNN
-F 1 "SFH617A-2" H 3825 3259 50  0000 C CNN
-F 2 "Package_DIP:DIP-4_W7.62mm" H 3625 2825 50  0001 L CIN
-F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 3825 3025 50  0001 L CNN
-	1    3825 3025
+P 3475 3025
+F 0 "U102" H 3475 2825 50  0000 C CNN
+F 1 "SFH617A-2" H 3475 2750 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 3275 2825 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 3475 3025 50  0001 L CNN
+	1    3475 3025
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5D8868B9
-P 4275 2700
+P 3875 2700
 AR Path="/5CBB0B33/5D8868B9" Ref="R?"  Part="1" 
 AR Path="/5D8868B9" Ref="R103"  Part="1" 
-F 0 "R103" H 4025 2775 50  0000 L CNN
-F 1 "470k" H 4025 2700 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4205 2700 50  0001 C CNN
-F 3 "~" H 4275 2700 50  0001 C CNN
-	1    4275 2700
+F 0 "R103" H 3625 2775 50  0000 L CNN
+F 1 "620" H 3625 2700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3805 2700 50  0001 C CNN
+F 3 "~" H 3875 2700 50  0001 C CNN
+	1    3875 2700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Diode_Bridge:B80C800DM D101
 U 1 1 5D88948A
-P 5025 2825
-F 0 "D101" V 5225 2625 50  0000 R CNN
-F 1 "B80C800DM" V 5150 2625 50  0000 R CNN
-F 2 "Diode_THT:Diode_Bridge_DIP-4_W7.62mm_P5.08mm" H 5175 2950 50  0001 L CNN
-F 3 "https://www.vishay.com/docs/88533/800dm.pdf" H 5025 2825 50  0001 C CNN
-	1    5025 2825
+P 4800 2825
+F 0 "D101" V 5175 2775 50  0000 R CNN
+F 1 "B80C800DM" V 5075 2725 50  0000 R CNN
+F 2 "Diode_THT:Diode_Bridge_DIP-4_W7.62mm_P5.08mm" H 4950 2950 50  0001 L CNN
+F 3 "https://www.vishay.com/docs/88533/800dm.pdf" H 4800 2825 50  0001 C CNN
+	1    4800 2825
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4725 2825 4725 2325
-$Comp
-L Device:C C?
-U 1 1 5D8CF888
-P 4475 2825
-AR Path="/5CBB0B33/5D8CF888" Ref="C?"  Part="1" 
-AR Path="/5D8CF888" Ref="C105"  Part="1" 
-F 0 "C105" H 4500 2925 50  0000 L CNN
-F 1 "470n" H 4500 2725 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 4513 2675 50  0001 C CNN
-F 3 "~" H 4475 2825 50  0001 C CNN
-	1    4475 2825
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4475 2675 4475 2525
-Wire Wire Line
-	4475 2525 5025 2525
-Wire Wire Line
-	4475 2975 4475 3125
-Wire Wire Line
-	4475 3125 5025 3125
-Wire Wire Line
-	4725 2325 5100 2325
 Wire Wire Line
 	3650 1700 5475 1700
 $Comp
@@ -1550,32 +1523,21 @@ P 5250 1950
 AR Path="/5CBB0B33/5D902ABA" Ref="C?"  Part="1" 
 AR Path="/5D902ABA" Ref="C108"  Part="1" 
 F 0 "C108" V 5100 1875 50  0000 L CNN
-F 1 "33n" V 5400 1875 50  0000 L CNN
+F 1 "470n" V 5400 1875 50  0000 L CNN
 F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5288 1800 50  0001 C CNN
 F 3 "~" H 5250 1950 50  0001 C CNN
 	1    5250 1950
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5100 1950 4725 1950
-Wire Wire Line
-	4725 1950 4725 2325
-Connection ~ 4725 2325
-Wire Wire Line
 	2575 2275 2575 2925
 Connection ~ 2575 2925
 Wire Wire Line
-	4275 2550 4275 2525
+	3875 2550 3875 2525
 Wire Wire Line
-	4275 2525 4475 2525
-Connection ~ 4475 2525
+	3875 2850 3875 2925
 Wire Wire Line
-	4275 2850 4275 2925
-Wire Wire Line
-	4275 2925 4125 2925
-Wire Wire Line
-	4125 3125 4475 3125
-Connection ~ 4475 3125
+	3875 2925 3775 2925
 $Comp
 L Device:R R?
 U 1 1 5D98C37C
@@ -1598,20 +1560,20 @@ Wire Wire Line
 Wire Wire Line
 	2975 2375 3000 2375
 Wire Wire Line
-	2975 2925 3525 2925
+	2975 2925 3175 2925
 Connection ~ 2975 2925
 $Comp
 L power:Earth #PWR0112
 U 1 1 5D9DEA31
-P 3525 3125
+P 3175 3125
 AR Path="/5D9DEA31" Ref="#PWR0112"  Part="1" 
 AR Path="/5C000D65/5D9DEA31" Ref="#PWR?"  Part="1" 
 AR Path="/5CBB0B33/5D9DEA31" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0112" H 3525 2875 50  0001 C CNN
-F 1 "Earth" H 3525 2975 50  0001 C CNN
-F 2 "" H 3525 3125 50  0001 C CNN
-F 3 "" H 3525 3125 50  0001 C CNN
-	1    3525 3125
+F 0 "#PWR0112" H 3175 2875 50  0001 C CNN
+F 1 "Earth" H 3175 2975 50  0001 C CNN
+F 2 "" H 3175 3125 50  0001 C CNN
+F 3 "" H 3175 3125 50  0001 C CNN
+	1    3175 3125
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1646,17 +1608,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 1950 5675 1950
 Wire Wire Line
-	5400 2325 5475 2325
-Connection ~ 5475 2325
-Wire Wire Line
-	5475 2325 5475 2825
-Wire Wire Line
 	5675 1950 5675 2950
-Wire Wire Line
-	5325 2825 5475 2825
-Connection ~ 5475 2825
-Wire Wire Line
-	5475 2825 5475 3150
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J123
 U 1 1 5ED98581
@@ -2092,18 +2044,18 @@ Text GLabel 7800 6950 0    50   Output ~ 0
 STBY
 Wire Wire Line
 	7800 6950 7900 6950
-Text GLabel 8500 6950 2    50   Output ~ 0
+Text GLabel 8875 7375 2    50   Output ~ 0
 OP
 Wire Wire Line
-	8400 6950 8500 6950
+	8775 7375 8875 7375
 Text GLabel 7800 6750 0    50   Input ~ 0
 RF_READY
 Wire Wire Line
 	7800 6750 7900 6750
-Text GLabel 8500 6750 2    50   Output ~ 0
+Text GLabel 9200 6950 2    50   Output ~ 0
 RESET_CMD
 Wire Wire Line
-	8400 6750 8500 6750
+	9100 6950 9200 6950
 Text GLabel 7800 6450 0    50   Input ~ 0
 ALC_MON
 Wire Wire Line
@@ -2730,4 +2682,82 @@ Wire Notes Line
 	9875 5025 9875 875 
 Wire Notes Line
 	9875 875  1275 875 
+$Comp
+L Diode:BAT54CW D?
+U 1 1 5DEE2596
+P 8775 7175
+AR Path="/5E11E288/5DEE2596" Ref="D?"  Part="1" 
+AR Path="/5DEE2596" Ref="D103"  Part="1" 
+F 0 "D103" H 8425 7100 50  0000 L CNN
+F 1 "BAT54CW" H 8375 7000 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 8850 7300 50  0001 L CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 8695 7175 50  0001 C CNN
+	1    8775 7175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 7175 8475 7175
+Text GLabel 9125 7175 2    50   Input ~ 0
+OP_CMD_PI
+Wire Wire Line
+	9125 7175 9075 7175
+$Comp
+L Diode:BAT54CW D?
+U 1 1 5E035F59
+P 9100 6750
+AR Path="/5E11E288/5E035F59" Ref="D?"  Part="1" 
+AR Path="/5E035F59" Ref="D104"  Part="1" 
+F 0 "D104" H 8750 6675 50  0000 L CNN
+F 1 "BAT54CW" H 8700 6575 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 9175 6875 50  0001 L CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 9020 6750 50  0001 C CNN
+	1    9100 6750
+	1    0    0    -1  
+$EndComp
+Text GLabel 9450 6750 2    50   Input ~ 0
+RESET_CMD_PI
+Wire Wire Line
+	9450 6750 9400 6750
+Wire Wire Line
+	8400 6750 8800 6750
+Wire Wire Line
+	8400 7175 8400 6950
+$Comp
+L Device:CP C?
+U 1 1 5DFBB614
+P 4100 2825
+AR Path="/5CBB0B33/5DFBB614" Ref="C?"  Part="1" 
+AR Path="/5DFBB614" Ref="C105"  Part="1" 
+F 0 "C105" H 4218 2871 50  0000 L CNN
+F 1 "47u" H 4218 2780 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C" H 4138 2675 50  0001 C CNN
+F 3 "~" H 4100 2825 50  0001 C CNN
+	1    4100 2825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3875 2525 4100 2525
+Wire Wire Line
+	3775 3125 4100 3125
+Wire Wire Line
+	4100 2675 4100 2525
+Connection ~ 4100 2525
+Wire Wire Line
+	4100 2525 4800 2525
+Wire Wire Line
+	4100 2975 4100 3125
+Connection ~ 4100 3125
+Wire Wire Line
+	4100 3125 4800 3125
+Wire Wire Line
+	5475 2150 5475 2825
+Wire Wire Line
+	5400 2825 5475 2825
+Connection ~ 5475 2825
+Wire Wire Line
+	5475 2825 5475 3150
+Wire Wire Line
+	4500 2825 4500 1950
+Wire Wire Line
+	4500 1950 5100 1950
 $EndSCHEMATC
