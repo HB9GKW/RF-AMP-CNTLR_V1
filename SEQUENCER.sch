@@ -1,12 +1,11 @@
 EESchema Schematic File Version 4
-LIBS:RF-AMP-CNTLR_V1-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 4 4
 Title "RF Amplifier Controller"
-Date "2019-12-01"
+Date "2020-01-11"
 Rev "1"
 Comp "HB9GKW"
 Comment1 ""
@@ -111,17 +110,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/ina138.pdf" H 4500 3030 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:SMZxxx D401
-U 1 1 5D2C560C
-P 3625 2000
-F 0 "D401" H 3625 2216 50  0000 C CNN
-F 1 "SMZ33" H 3625 2125 50  0000 C CNN
-F 2 "Diode_SMD:D_MELF" H 3625 1825 50  0001 C CNN
-F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/smz1.pdf" H 3625 2000 50  0001 C CNN
-	1    3625 2000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R?
 U 1 1 5D2C5613
 P 3825 2250
@@ -129,7 +117,7 @@ AR Path="/5D2C5613" Ref="R?"  Part="1"
 AR Path="/5C000D65/5D2C5613" Ref="R?"  Part="1" 
 AR Path="/5D2BEC5D/5D2C5613" Ref="R407"  Part="1" 
 F 0 "R407" V 3975 2350 50  0000 R CNN
-F 1 "39k" V 3900 2325 50  0000 R CNN
+F 1 "4k7" V 3900 2325 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3755 2250 50  0001 C CNN
 F 3 "~" H 3825 2250 50  0001 C CNN
 	1    3825 2250
@@ -313,7 +301,7 @@ AR Path="/5D8DD977" Ref="R?"  Part="1"
 AR Path="/5C000D65/5D8DD977" Ref="R?"  Part="1" 
 AR Path="/5D2BEC5D/5D8DD977" Ref="R406"  Part="1" 
 F 0 "R406" V 3875 6000 50  0000 R CNN
-F 1 "10k" V 3800 5975 50  0000 R CNN
+F 1 "6k8" V 3800 5975 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3630 5900 50  0001 C CNN
 F 3 "~" H 3700 5900 50  0001 C CNN
 	1    3700 5900
@@ -3345,4 +3333,15 @@ Wire Notes Line
 	1900 7050 1900 825 
 Wire Notes Line
 	1900 825  7025 825 
+$Comp
+L Diode:Z1SMAxxx D401
+U 1 1 5E1D16AF
+P 3625 2000
+F 0 "D401" H 3625 2216 50  0000 C CNN
+F 1 "Z1SMA33" H 3625 2125 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 3625 1825 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/z1sma1.pdf" H 3625 2000 50  0001 C CNN
+	1    3625 2000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
