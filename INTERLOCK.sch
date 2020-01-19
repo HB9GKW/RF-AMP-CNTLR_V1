@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 4
 Title "RF Amplifier Controller"
-Date "2019-12-01"
+Date "2020-01-19"
 Rev "1"
 Comp "HB9GKW"
 Comment1 ""
@@ -406,9 +406,9 @@ L Diode:DZ2S047X0L D305
 U 1 1 609DE12B
 P 4425 2400
 F 0 "D305" H 4350 2500 50  0000 L CNN
-F 1 "DZ2S047X0L" H 4100 2300 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 4100 2300 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 4425 2225 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 4425 2400 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 4425 2400 50  0001 C CNN
 	1    4425 2400
 	0    1    1    0   
 $EndComp
@@ -680,7 +680,7 @@ P 15025 7725
 AR Path="/62FE001A" Ref="R?"  Part="1" 
 AR Path="/5C000D65/62FE001A" Ref="R?"  Part="1" 
 AR Path="/5E11E288/62FE001A" Ref="R381"  Part="1" 
-F 0 "R381" V 15175 7775 50  0000 R CNN
+F 0 "R381" V 15175 7825 50  0000 R CNN
 F 1 "470" V 15100 7800 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14955 7725 50  0001 C CNN
 F 3 "~" H 15025 7725 50  0001 C CNN
@@ -710,9 +710,9 @@ L Diode:DZ2S047X0L D319
 U 1 1 62FF493E
 P 15025 8175
 F 0 "D319" H 14950 8275 50  0000 L CNN
-F 1 "DZ2S047X0L" H 14700 8075 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 14700 8075 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 15025 8000 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 15025 8175 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 15025 8175 50  0001 C CNN
 	1    15025 8175
 	0    1    1    0   
 $EndComp
@@ -758,7 +758,7 @@ P 14650 7725
 AR Path="/630CD067" Ref="R?"  Part="1" 
 AR Path="/5C000D65/630CD067" Ref="R?"  Part="1" 
 AR Path="/5E11E288/630CD067" Ref="R380"  Part="1" 
-F 0 "R380" V 14800 7775 50  0000 R CNN
+F 0 "R380" V 14800 7825 50  0000 R CNN
 F 1 "4k7" V 14725 7800 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14580 7725 50  0001 C CNN
 F 3 "~" H 14650 7725 50  0001 C CNN
@@ -1321,9 +1321,9 @@ L Diode:DZ2S047X0L D306
 U 1 1 5DDC457B
 P 4425 4700
 F 0 "D306" H 4350 4800 50  0000 L CNN
-F 1 "DZ2S047X0L" H 4100 4600 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 4100 4600 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 4425 4525 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 4425 4700 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 4425 4700 50  0001 C CNN
 	1    4425 4700
 	0    1    1    0   
 $EndComp
@@ -1923,9 +1923,9 @@ L Diode:DZ2S047X0L D307
 U 1 1 5DE0FA52
 P 4425 7000
 F 0 "D307" H 4350 7100 50  0000 L CNN
-F 1 "DZ2S047X0L" H 4100 6900 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 4100 6900 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 4425 6825 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 4425 7000 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 4425 7000 50  0001 C CNN
 	1    4425 7000
 	0    1    1    0   
 $EndComp
@@ -2525,9 +2525,9 @@ L Diode:DZ2S047X0L D308
 U 1 1 5DE0FC06
 P 4425 9300
 F 0 "D308" H 4350 9400 50  0000 L CNN
-F 1 "DZ2S047X0L" H 4100 9200 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 4100 9200 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 4425 9125 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 4425 9300 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 4425 9300 50  0001 C CNN
 	1    4425 9300
 	0    1    1    0   
 $EndComp
@@ -3190,9 +3190,9 @@ L Diode:DZ2S047X0L D314
 U 1 1 5F9D356F
 P 8100 2400
 F 0 "D314" H 8025 2500 50  0000 L CNN
-F 1 "DZ2S047X0L" H 7775 2300 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 7775 2300 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 8100 2225 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 8100 2400 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 8100 2400 50  0001 C CNN
 	1    8100 2400
 	0    1    1    0   
 $EndComp
@@ -3544,9 +3544,9 @@ L Diode:DZ2S047X0L D315
 U 1 1 603A5E68
 P 8100 6825
 F 0 "D315" H 8025 6925 50  0000 L CNN
-F 1 "DZ2S047X0L" H 7775 6725 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 7775 6725 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 8100 6650 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 8100 6825 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 8100 6825 50  0001 C CNN
 	1    8100 6825
 	0    1    1    0   
 $EndComp
@@ -3895,9 +3895,9 @@ L Diode:DZ2S047X0L D316
 U 1 1 608BA363
 P 8100 9125
 F 0 "D316" H 8025 9225 50  0000 L CNN
-F 1 "DZ2S047X0L" H 7775 9025 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 7775 9025 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 8100 8950 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 8100 9125 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 8100 9125 50  0001 C CNN
 	1    8100 9125
 	0    1    1    0   
 $EndComp
@@ -4385,9 +4385,9 @@ L Diode:DZ2S047X0L D317
 U 1 1 60BEDAB9
 P 8125 4700
 F 0 "D317" H 8050 4800 50  0000 L CNN
-F 1 "DZ2S047X0L" H 7800 4600 50  0000 L CNN
+F 1 "BZT52C4V7T-7" H 7800 4600 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-523" H 8125 4525 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/content/data/SC/ds/ds4/DZ2S04700L_E.pdf" H 8125 4700 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/115/ds30502-1142513.pdf" H 8125 4700 50  0001 C CNN
 	1    8125 4700
 	0    1    1    0   
 $EndComp
