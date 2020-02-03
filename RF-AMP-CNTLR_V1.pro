@@ -1,6 +1,6 @@
-update=Sat 11 Jan 2020 10:50:19 AM CET
+update=03.02.2020 09:20:49
 version=1
-last_client=kicad
+last_client=pcbnew
 [general]
 version=1
 RootSch=
@@ -274,7 +274,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/2]
 Name=Vdd
-Clearance=1
+Clearance=0.3
 TrackWidth=0.25
 ViaDiameter=0.8
 ViaDrill=0.4
