@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/caget/kicad/RF-AMP-CNTLR_V1/RF-AMP-CNTLR_V1.sch)
-    (date "Sun 05 Jul 2020 09:48:23 AM CEST")
+    (date "Sun 19 Jul 2020 05:16:01 PM CEST")
     (tool "Eeschema 5.1.6+dfsg1-1~bpo10+1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1902,7 +1902,7 @@
       (sheetpath (names /CONTROLLER/) (tstamps /5CBD59C6/))
       (tstamp 5FADAD98))
     (comp (ref C65)
-      (value 100n)
+      (value 10n)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder)
       (datasheet ~)
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
