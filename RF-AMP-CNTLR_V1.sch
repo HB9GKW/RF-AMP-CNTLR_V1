@@ -1189,8 +1189,6 @@ Wire Wire Line
 	1975 2850 1975 2800
 Wire Wire Line
 	3200 2800 3200 2300
-Wire Wire Line
-	3200 2300 3550 2300
 Connection ~ 3200 2800
 Wire Wire Line
 	3625 3250 3550 3250
@@ -1201,29 +1199,29 @@ Wire Wire Line
 $Comp
 L power:Earth #PWR025
 U 1 1 5D5B9FA3
-P 3625 2500
+P 3550 2575
 AR Path="/5D5B9FA3" Ref="#PWR025"  Part="1" 
 AR Path="/5C000D65/5D5B9FA3" Ref="#PWR?"  Part="1" 
 AR Path="/5CBB0B33/5D5B9FA3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR025" H 3625 2250 50  0001 C CNN
-F 1 "Earth" H 3625 2350 50  0001 C CNN
-F 2 "" H 3625 2500 50  0001 C CNN
-F 3 "" H 3625 2500 50  0001 C CNN
-	1    3625 2500
+F 0 "#PWR025" H 3550 2325 50  0001 C CNN
+F 1 "Earth" H 3550 2425 50  0001 C CNN
+F 2 "" H 3550 2575 50  0001 C CNN
+F 3 "" H 3550 2575 50  0001 C CNN
+	1    3550 2575
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:Earth #PWR026
 U 1 1 5D5BA03B
-P 3625 3450
+P 3550 3525
 AR Path="/5D5BA03B" Ref="#PWR026"  Part="1" 
 AR Path="/5C000D65/5D5BA03B" Ref="#PWR?"  Part="1" 
 AR Path="/5CBB0B33/5D5BA03B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR026" H 3625 3200 50  0001 C CNN
-F 1 "Earth" H 3625 3300 50  0001 C CNN
-F 2 "" H 3625 3450 50  0001 C CNN
-F 3 "" H 3625 3450 50  0001 C CNN
-	1    3625 3450
+F 0 "#PWR026" H 3550 3275 50  0001 C CNN
+F 1 "Earth" H 3550 3375 50  0001 C CNN
+F 2 "" H 3550 3525 50  0001 C CNN
+F 3 "" H 3550 3525 50  0001 C CNN
+	1    3550 3525
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1821,15 +1819,7 @@ Wire Wire Line
 Wire Wire Line
 	3625 2400 3550 2400
 Wire Wire Line
-	3550 2400 3550 2300
-Connection ~ 3550 2300
-Wire Wire Line
-	3550 2300 3625 2300
-Wire Wire Line
 	3625 3350 3550 3350
-Wire Wire Line
-	3550 3350 3550 3250
-Connection ~ 3550 3250
 Text HLabel 3200 2025 2    50   Output ~ 0
 +12V_
 Text HLabel 4525 2500 2    50   Output ~ 0
@@ -2536,4 +2526,20 @@ Wire Wire Line
 	11025 7050 9050 7050
 Wire Wire Line
 	10275 6150 11025 6150
+Wire Wire Line
+	3200 2300 3625 2300
+Wire Wire Line
+	3550 2400 3550 2500
+Wire Wire Line
+	3625 2500 3550 2500
+Connection ~ 3550 2500
+Wire Wire Line
+	3550 2500 3550 2575
+Wire Wire Line
+	3550 3350 3550 3450
+Wire Wire Line
+	3625 3450 3550 3450
+Connection ~ 3550 3450
+Wire Wire Line
+	3550 3450 3550 3525
 $EndSCHEMATC
