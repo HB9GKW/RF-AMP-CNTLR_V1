@@ -762,36 +762,36 @@ Wire Wire Line
 	4575 3750 4800 3750
 Wire Wire Line
 	4575 1850 4800 1850
-Text HLabel 10050 8125 2    50   Output ~ 0
+Text HLabel 9050 8825 0    50   Output ~ 0
 VDD_EN_LV
-Text HLabel 10050 8225 2    50   Output ~ 0
+Text HLabel 9050 8725 0    50   Output ~ 0
 RF_SW1_ON_LV
-Text HLabel 10050 8325 2    50   Output ~ 0
+Text HLabel 9050 8625 0    50   Output ~ 0
 RF_SW2_ON_LV
-Text HLabel 10050 8425 2    50   Output ~ 0
+Text HLabel 9050 8525 0    50   Output ~ 0
 GATE_ALC_EN_LV
-Text HLabel 10025 4625 2    50   Output ~ 0
+Text HLabel 9025 5125 0    50   Output ~ 0
 DISPLAY_LV
-Text HLabel 10025 4525 2    50   Output ~ 0
+Text HLabel 9025 5225 0    50   Output ~ 0
 RESET_ILK_LV
-Text HLabel 10025 4825 2    50   Output ~ 0
+Text HLabel 9025 4925 0    50   Output ~ 0
 OPR_LV
 Wire Wire Line
-	9925 5225 10025 5225
+	9125 4525 9025 4525
 Wire Wire Line
-	9925 4525 10025 4525
+	9125 5225 9025 5225
 Wire Wire Line
-	9925 4625 10025 4625
+	9125 5125 9025 5125
 Wire Wire Line
-	9925 4725 10025 4725
+	9125 5025 9025 5025
 Wire Wire Line
-	9925 4825 10025 4825
+	9125 4925 9025 4925
 Wire Wire Line
-	9925 4925 10025 4925
+	9125 4825 9025 4825
 Wire Wire Line
-	9925 5025 10025 5025
+	9125 4725 9025 4725
 Wire Wire Line
-	9925 5125 10025 5125
+	9125 4625 9025 4625
 $Comp
 L power:Earth #PWR?
 U 1 1 5EEC0046
@@ -813,31 +813,31 @@ Text HLabel 4800 3050 2    50   Input ~ 0
 RF_SW1_ON
 Text HLabel 4800 3350 2    50   Input ~ 0
 PTT
-Text HLabel 9025 8125 0    50   Input ~ 0
+Text HLabel 10075 8825 2    50   Input ~ 0
 VDD_EN
-Text HLabel 9025 8225 0    50   Input ~ 0
+Text HLabel 10075 8725 2    50   Input ~ 0
 RF_SW1_ON
-Text HLabel 9025 8325 0    50   Input ~ 0
+Text HLabel 10075 8625 2    50   Input ~ 0
 RF_SW2_ON
-Text HLabel 9025 8425 0    50   Input ~ 0
+Text HLabel 10075 8525 2    50   Input ~ 0
 GATE_ALC_EN
-Text HLabel 9025 8525 0    50   Input ~ 0
+Text HLabel 10075 8425 2    50   Input ~ 0
 ON_AIR
-Text HLabel 9025 8625 0    50   Input ~ 0
+Text HLabel 10075 8325 2    50   Input ~ 0
 FAULT
 Wire Wire Line
-	9000 5125 9125 5125
+	10050 4625 9925 4625
 Wire Wire Line
-	9000 5025 9125 5025
+	10050 4725 9925 4725
 $Comp
 L power:+5V #PWR0247
 U 1 1 5F22B0AB
-P 9425 4075
-F 0 "#PWR0247" H 9425 3925 50  0001 C CNN
-F 1 "+5V" H 9440 4248 50  0000 C CNN
-F 2 "" H 9425 4075 50  0001 C CNN
-F 3 "" H 9425 4075 50  0001 C CNN
-	1    9425 4075
+P 9625 4075
+F 0 "#PWR0247" H 9625 3925 50  0001 C CNN
+F 1 "+5V" H 9640 4248 50  0000 C CNN
+F 2 "" H 9625 4075 50  0001 C CNN
+F 3 "" H 9625 4075 50  0001 C CNN
+	1    9625 4075
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -845,12 +845,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0255
 U 1 1 5F25EB84
-P 9625 4075
-F 0 "#PWR0255" H 9625 3925 50  0001 C CNN
-F 1 "+3V3" H 9640 4248 50  0000 C CNN
-F 2 "" H 9625 4075 50  0001 C CNN
-F 3 "" H 9625 4075 50  0001 C CNN
-	1    9625 4075
+P 9425 4075
+F 0 "#PWR0255" H 9425 3925 50  0001 C CNN
+F 1 "+3V3" H 9440 4248 50  0000 C CNN
+F 2 "" H 9425 4075 50  0001 C CNN
+F 3 "" H 9425 4075 50  0001 C CNN
+	1    9425 4075
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1307,43 +1307,43 @@ Text HLabel 3375 4850 0    50   Output ~ 0
 RESET_ISP
 Wire Wire Line
 	3375 4850 3475 4850
-Text HLabel 9000 4825 0    50   Input ~ 0
+Text HLabel 10050 4925 2    50   Input ~ 0
 OPR
-Text HLabel 9000 4525 0    50   Input ~ 0
+Text HLabel 10050 5225 2    50   Input ~ 0
 RESET_ILK
 Wire Wire Line
-	9000 5225 9125 5225
+	10050 4525 9925 4525
 Wire Wire Line
-	9000 4525 9125 4525
+	10050 5225 9925 5225
 Wire Wire Line
-	9000 4625 9125 4625
-Text HLabel 9000 4625 0    50   Input ~ 0
+	10050 5125 9925 5125
+Text HLabel 10050 5125 2    50   Input ~ 0
 DISPLAY
-Text HLabel 9000 5225 0    50   BiDi ~ 0
+Text HLabel 10050 4525 2    50   BiDi ~ 0
 MOSI_FAN
 Wire Wire Line
-	9000 4725 9125 4725
+	10050 5025 9925 5025
 Wire Wire Line
-	9000 4825 9125 4825
+	10050 4925 9925 4925
 Wire Wire Line
-	9125 4925 9000 4925
-Text HLabel 9000 5125 0    50   BiDi ~ 0
+	9925 4825 10050 4825
+Text HLabel 10050 4625 2    50   BiDi ~ 0
 MISO_RF_INHIBIT
-Text HLabel 9000 4925 0    50   BiDi ~ 0
+Text HLabel 10050 4825 2    50   BiDi ~ 0
 SCK_SOFT_ILK
-Text HLabel 9000 5025 0    50   Output ~ 0
+Text HLabel 10050 4725 2    50   Output ~ 0
 RESET_ISP
-Text HLabel 10050 8525 2    50   Output ~ 0
+Text HLabel 9050 8425 0    50   Output ~ 0
 ON_AIR_LV
-Text HLabel 10050 8625 2    50   Output ~ 0
+Text HLabel 9050 8325 0    50   Output ~ 0
 FAULT_LV
-Text HLabel 10025 5225 2    50   BiDi ~ 0
+Text HLabel 9025 4525 0    50   BiDi ~ 0
 MOSI_FAN_LV
-Text HLabel 10025 5125 2    50   BiDi ~ 0
+Text HLabel 9025 4625 0    50   BiDi ~ 0
 MISO_RF_INHIBIT_LV
-Text HLabel 10025 4925 2    50   BiDi ~ 0
+Text HLabel 9025 4825 0    50   BiDi ~ 0
 SCK_SOFT_ILK_LV
-Text HLabel 10025 5025 2    50   Input ~ 0
+Text HLabel 9025 4725 0    50   Input ~ 0
 RESET_ISP_LV
 Text HLabel 12800 1625 0    50   BiDi ~ 0
 SCK_SOFT_ILK_LV
@@ -1637,9 +1637,9 @@ F 3 "" H 14575 6500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	14575 6500 14525 6500
-Text HLabel 9000 4725 0    50   Input ~ 0
+Text HLabel 10050 5025 2    50   Input ~ 0
 PTT
-Text HLabel 10025 4725 2    50   Output ~ 0
+Text HLabel 9025 5025 0    50   Output ~ 0
 PTT_LV
 $Comp
 L Logic_LevelTranslator:TXS0108EPW U20
@@ -1653,21 +1653,21 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 9550 6525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9950 6325 10050 6325
+	9150 7025 9050 7025
 Wire Wire Line
-	9950 7025 10050 7025
+	9150 6325 9050 6325
 Wire Wire Line
-	9950 6925 10050 6925
+	9150 6425 9050 6425
 Wire Wire Line
-	9950 6825 10050 6825
+	9150 6525 9050 6525
 Wire Wire Line
-	9950 6725 10050 6725
+	9150 6625 9050 6625
 Wire Wire Line
-	9950 6625 10050 6625
+	9150 6725 9050 6725
 Wire Wire Line
-	9950 6525 10050 6525
+	9150 6825 9050 6825
 Wire Wire Line
-	9950 6425 10050 6425
+	9150 6925 9050 6925
 $Comp
 L power:Earth #PWR?
 U 1 1 60601928
@@ -1683,18 +1683,18 @@ F 3 "" H 9550 7325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9025 6425 9150 6425
+	10075 6925 9950 6925
 Wire Wire Line
-	9025 6525 9150 6525
+	10075 6825 9950 6825
 $Comp
 L power:+5V #PWR0248
 U 1 1 60601934
-P 9450 5875
-F 0 "#PWR0248" H 9450 5725 50  0001 C CNN
-F 1 "+5V" H 9465 6048 50  0000 C CNN
-F 2 "" H 9450 5875 50  0001 C CNN
-F 3 "" H 9450 5875 50  0001 C CNN
-	1    9450 5875
+P 9650 5875
+F 0 "#PWR0248" H 9650 5725 50  0001 C CNN
+F 1 "+5V" H 9665 6048 50  0000 C CNN
+F 2 "" H 9650 5875 50  0001 C CNN
+F 3 "" H 9650 5875 50  0001 C CNN
+	1    9650 5875
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1702,12 +1702,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0256
 U 1 1 6060193F
-P 9650 5875
-F 0 "#PWR0256" H 9650 5725 50  0001 C CNN
-F 1 "+3V3" H 9665 6048 50  0000 C CNN
-F 2 "" H 9650 5875 50  0001 C CNN
-F 3 "" H 9650 5875 50  0001 C CNN
-	1    9650 5875
+P 9450 5875
+F 0 "#PWR0256" H 9450 5725 50  0001 C CNN
+F 1 "+3V3" H 9465 6048 50  0000 C CNN
+F 2 "" H 9450 5875 50  0001 C CNN
+F 3 "" H 9450 5875 50  0001 C CNN
+	1    9450 5875
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1722,48 +1722,48 @@ Connection ~ 9450 5900
 Wire Wire Line
 	9450 5900 9450 5925
 Wire Wire Line
-	9025 6325 9150 6325
+	10075 7025 9950 7025
 Wire Wire Line
-	9025 7025 9150 7025
+	10075 6325 9950 6325
 Wire Wire Line
-	9025 6925 9150 6925
+	10075 6425 9950 6425
 Wire Wire Line
-	9025 6825 9150 6825
+	10075 6525 9950 6525
 Wire Wire Line
-	9025 6725 9150 6725
+	10075 6625 9950 6625
 Wire Wire Line
-	9150 6625 9025 6625
-Text HLabel 9025 7025 0    50   Input ~ 0
+	9950 6725 10075 6725
+Text HLabel 10075 6325 2    50   Input ~ 0
 HSWR1
-Text HLabel 9025 6925 0    50   Input ~ 0
+Text HLabel 10075 6425 2    50   Input ~ 0
 HSWR2
-Text HLabel 9025 6825 0    50   Input ~ 0
+Text HLabel 10075 6525 2    50   Input ~ 0
 HSWR3
-Text HLabel 9025 6725 0    50   Input ~ 0
+Text HLabel 10075 6625 2    50   Input ~ 0
 HSWR4
-Text HLabel 9025 6625 0    50   Input ~ 0
+Text HLabel 10075 6725 2    50   Input ~ 0
 RF_OL
-Text HLabel 9025 6525 0    50   Input ~ 0
+Text HLabel 10075 6825 2    50   Input ~ 0
 IDD_OL
-Text HLabel 9025 6425 0    50   Input ~ 0
+Text HLabel 10075 6925 2    50   Input ~ 0
 VDD_LIM
-Text HLabel 9025 6325 0    50   Input ~ 0
+Text HLabel 10075 7025 2    50   Input ~ 0
 TEMP
-Text HLabel 10050 7025 2    50   Output ~ 0
+Text HLabel 9050 6325 0    50   Output ~ 0
 HSWR1_LV
-Text HLabel 10050 6925 2    50   Output ~ 0
+Text HLabel 9050 6425 0    50   Output ~ 0
 HSWR2_LV
-Text HLabel 10050 6825 2    50   Output ~ 0
+Text HLabel 9050 6525 0    50   Output ~ 0
 HSWR3_LV
-Text HLabel 10050 6725 2    50   Output ~ 0
+Text HLabel 9050 6625 0    50   Output ~ 0
 UNBAL_LV
-Text HLabel 10050 6625 2    50   Output ~ 0
+Text HLabel 9050 6725 0    50   Output ~ 0
 RF_OL_LV
-Text HLabel 10050 6525 2    50   Output ~ 0
+Text HLabel 9050 6825 0    50   Output ~ 0
 IDD_OL_LV
-Text HLabel 10050 6425 2    50   Output ~ 0
+Text HLabel 9050 6925 0    50   Output ~ 0
 VDD_LIM_LV
-Text HLabel 10050 6325 2    50   Output ~ 0
+Text HLabel 9050 7025 0    50   Output ~ 0
 TEMP_LV
 $Comp
 L Logic_LevelTranslator:TXS0108EPW U21
@@ -1777,17 +1777,17 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 9550 8325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9950 8125 10050 8125
+	9150 8825 9050 8825
 Wire Wire Line
-	9950 8225 10050 8225
+	9150 8725 9050 8725
 Wire Wire Line
-	9950 8325 10050 8325
+	9150 8625 9050 8625
 Wire Wire Line
-	9950 8425 10050 8425
+	9150 8525 9050 8525
 Wire Wire Line
-	9950 8525 10050 8525
+	9150 8425 9050 8425
 Wire Wire Line
-	9950 8625 10050 8625
+	9150 8325 9050 8325
 $Comp
 L power:Earth #PWR?
 U 1 1 606EDE7C
@@ -1803,16 +1803,16 @@ F 3 "" H 9550 9125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9025 8625 9150 8625
+	10075 8325 9950 8325
 $Comp
 L power:+5V #PWR0249
 U 1 1 606EDE88
-P 9450 7675
-F 0 "#PWR0249" H 9450 7525 50  0001 C CNN
-F 1 "+5V" H 9465 7848 50  0000 C CNN
-F 2 "" H 9450 7675 50  0001 C CNN
-F 3 "" H 9450 7675 50  0001 C CNN
-	1    9450 7675
+P 9650 7675
+F 0 "#PWR0249" H 9650 7525 50  0001 C CNN
+F 1 "+5V" H 9665 7848 50  0000 C CNN
+F 2 "" H 9650 7675 50  0001 C CNN
+F 3 "" H 9650 7675 50  0001 C CNN
+	1    9650 7675
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1820,12 +1820,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0257
 U 1 1 606EDE93
-P 9650 7675
-F 0 "#PWR0257" H 9650 7525 50  0001 C CNN
-F 1 "+3V3" H 9665 7848 50  0000 C CNN
-F 2 "" H 9650 7675 50  0001 C CNN
-F 3 "" H 9650 7675 50  0001 C CNN
-	1    9650 7675
+P 9450 7675
+F 0 "#PWR0257" H 9450 7525 50  0001 C CNN
+F 1 "+3V3" H 9465 7848 50  0000 C CNN
+F 2 "" H 9450 7675 50  0001 C CNN
+F 3 "" H 9450 7675 50  0001 C CNN
+	1    9450 7675
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1840,22 +1840,22 @@ Connection ~ 9450 7700
 Wire Wire Line
 	9450 7700 9450 7725
 Wire Wire Line
-	9025 8125 9150 8125
+	10075 8825 9950 8825
 Wire Wire Line
-	9025 8225 9150 8225
+	10075 8725 9950 8725
 Wire Wire Line
-	9025 8325 9150 8325
+	10075 8625 9950 8625
 Wire Wire Line
-	9025 8425 9150 8425
+	10075 8525 9950 8525
 Wire Wire Line
-	9150 8525 9025 8525
-Text HLabel 10050 8725 2    50   Input ~ 0
+	9950 8425 10075 8425
+Text HLabel 9050 8225 0    50   Input ~ 0
 SCL_PI_LV
-Text HLabel 10050 8825 2    50   BiDi ~ 0
+Text HLabel 9050 8125 0    50   BiDi ~ 0
 SDA_PI_LV
-Text HLabel 8600 8825 0    50   BiDi ~ 0
+Text HLabel 10500 8125 2    50   BiDi ~ 0
 SDA_PI_HV
-Text HLabel 8600 8725 0    50   Output ~ 0
+Text HLabel 10500 8225 2    50   Output ~ 0
 SCL_PI_HV
 Text HLabel 12850 4900 0    50   BiDi ~ 0
 GPB0
@@ -2854,37 +2854,37 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5F0A990E
-P 8775 9125
+P 10325 7825
 AR Path="/5F0A990E" Ref="R?"  Part="1" 
 AR Path="/5C000D65/5F0A990E" Ref="R?"  Part="1" 
 AR Path="/5D2BEC5D/5F0A990E" Ref="R?"  Part="1" 
 AR Path="/5E11E288/5F0A990E" Ref="R?"  Part="1" 
 AR Path="/5CBD59C6/5F0A990E" Ref="R100"  Part="1" 
-F 0 "R100" V 8925 9225 50  0000 R CNN
-F 1 "10k" V 8850 9200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8705 9125 50  0001 C CNN
-F 3 "~" H 8775 9125 50  0001 C CNN
-	1    8775 9125
-	-1   0    0    -1  
+F 0 "R100" V 10400 7925 50  0000 R CNN
+F 1 "10k" V 10475 7900 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10255 7825 50  0001 C CNN
+F 3 "~" H 10325 7825 50  0001 C CNN
+	1    10325 7825
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5F0AA7A3
-P 9025 9125
+P 10075 7825
 AR Path="/5F0AA7A3" Ref="R?"  Part="1" 
 AR Path="/5C000D65/5F0AA7A3" Ref="R?"  Part="1" 
 AR Path="/5D2BEC5D/5F0AA7A3" Ref="R?"  Part="1" 
 AR Path="/5E11E288/5F0AA7A3" Ref="R?"  Part="1" 
 AR Path="/5CBD59C6/5F0AA7A3" Ref="R101"  Part="1" 
-F 0 "R101" V 9175 9225 50  0000 R CNN
-F 1 "10k" V 9100 9200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8955 9125 50  0001 C CNN
-F 3 "~" H 9025 9125 50  0001 C CNN
-	1    9025 9125
-	-1   0    0    -1  
+F 0 "R101" V 10150 7925 50  0000 R CNN
+F 1 "10k" V 10225 7900 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10005 7825 50  0001 C CNN
+F 3 "~" H 10075 7825 50  0001 C CNN
+	1    10075 7825
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	9025 8975 9025 8825
+	10075 7975 10075 8125
 Wire Wire Line
 	7325 5500 7325 5750
 $Comp
@@ -2920,11 +2920,11 @@ F 3 "~" H 7325 5350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8775 9275 8775 9350
+	10325 7675 10325 7600
 Wire Wire Line
-	8775 9350 8900 9350
+	10325 7600 10200 7600
 Wire Wire Line
-	9025 9350 9025 9275
+	10075 7600 10075 7675
 Wire Wire Line
 	7325 5200 7325 5125
 Wire Wire Line
@@ -2950,31 +2950,31 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR0246
 U 1 1 5F4B672F
-P 8900 9400
-F 0 "#PWR0246" H 8900 9250 50  0001 C CNN
-F 1 "+5V" H 8900 9575 50  0000 C CNN
-F 2 "" H 8900 9400 50  0001 C CNN
-F 3 "" H 8900 9400 50  0001 C CNN
-	1    8900 9400
-	-1   0    0    1   
+P 10200 7550
+F 0 "#PWR0246" H 10200 7400 50  0001 C CNN
+F 1 "+5V" H 10200 7725 50  0000 C CNN
+F 2 "" H 10200 7550 50  0001 C CNN
+F 3 "" H 10200 7550 50  0001 C CNN
+	1    10200 7550
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8900 9350 8900 9400
-Connection ~ 8900 9350
+	10200 7600 10200 7550
+Connection ~ 10200 7600
 Wire Wire Line
-	8900 9350 9025 9350
-Connection ~ 8775 8725
+	10200 7600 10075 7600
+Connection ~ 10325 8225
 Wire Wire Line
-	8775 8725 9150 8725
-Connection ~ 9025 8825
+	10325 8225 9950 8225
+Connection ~ 10075 8125
 Wire Wire Line
-	9025 8825 9150 8825
+	10075 8125 9950 8125
 Wire Wire Line
-	8600 8725 8775 8725
+	10500 8225 10325 8225
 Wire Wire Line
-	8775 8725 8775 8975
+	10325 8225 10325 7975
 Wire Wire Line
-	8600 8825 9025 8825
+	10500 8125 10075 8125
 Connection ~ 7325 5750
 Wire Wire Line
 	7325 5750 7225 5750
@@ -3311,9 +3311,9 @@ Wire Wire Line
 Wire Wire Line
 	6325 9625 6375 9625
 Wire Wire Line
-	9950 8725 10050 8725
+	9150 8225 9050 8225
 Wire Wire Line
-	9950 8825 10050 8825
+	9150 8125 9050 8125
 $Comp
 L power:Earth #PWR?
 U 1 1 5F2EB8DF
