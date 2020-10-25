@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 3
 Title "RF Amplifier Controller"
-Date "2020-07-24"
+Date "2020-10-25"
 Rev "1"
 Comp "HB9GKW"
 Comment1 ""

@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 3
 Title "RF Amplifier Controller"
-Date "2020-07-24"
+Date "2020-10-25"
 Rev "1"
 Comp "HB9GKW"
 Comment1 ""
@@ -2542,4 +2542,14 @@ Wire Wire Line
 Connection ~ 3550 3450
 Wire Wire Line
 	3550 3450 3550 3525
+Text GLabel 10750 5850 2    50   Output ~ 0
+FWD
+Wire Wire Line
+	10675 5850 10750 5850
+Connection ~ 10675 5850
+Text GLabel 11350 5950 2    50   Output ~ 0
+REF
+Wire Wire Line
+	11350 5950 11275 5950
+Connection ~ 11275 5950
 $EndSCHEMATC
